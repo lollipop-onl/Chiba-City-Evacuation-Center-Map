@@ -1,14 +1,36 @@
 <template>
-  <RouterView />
+  <template v-if="isMapInitialized">
+    <RouterView />
+  </template>
+  <template v-else>
+    <p>loading...</p>
+  </template>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref, onMounted } from 'vue';
+import { loadMapsAPI } from './utils/loadMapsAPI';
 
 export default defineComponent({
   name: 'App',
   setup() {
-    // do nothing.
+    const isMapInitialized = ref(false);
+
+    onMounted(() => {
+      if ('google' in window && 'maps' in window.google) {
+        return;
+      }
+
+      window.initMap = () => {
+        isMapInitialized.value = true;
+      };
+
+      loadMapsAPI('initMap');
+    });
+
+    return {
+      isMapInitialized,
+    }
   },
 });
 </script>
