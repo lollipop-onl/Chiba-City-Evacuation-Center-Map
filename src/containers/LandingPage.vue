@@ -1,5 +1,6 @@
 <template>
-  <RouterView />
+  <div>application.</div>
+  <RouterLink to="/map">goto Map</RouterLink>
 </template>
 
 <script lang="ts">
