@@ -3,7 +3,7 @@ parserOptions:
   parser: '@typescript-eslint/parser'
 extends:
   - plugin:@typescript-eslint/recommended
-  - plugin:vue/recommended
+  - plugin:vue/vue3-recommended
   - prettier/@typescript-eslint
   - plugin:prettier/recommended
 rules:
