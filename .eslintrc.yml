@@ -4,10 +4,12 @@ parserOptions:
 extends:
   - plugin:@typescript-eslint/recommended
   - plugin:vue/vue3-recommended
-  - prettier/@typescript-eslint
-  - plugin:prettier/recommended
 rules:
-  prettier/prettier:
+  '@typescript-eslint/explicit-module-boundary-types': 'off'
+  vue/html-self-closing:
     - error
-    - singleQuote: true
-      semi: true
+    - html:
+        void: always
+        normal: always
+        component: always
+  vue/singleline-html-element-content-newline: 'off'
