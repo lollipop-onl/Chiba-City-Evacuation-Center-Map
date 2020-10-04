@@ -1,10 +1,8 @@
 <template>
-  <template v-if="isMapInitialized">
-    <RouterView />
-  </template>
-  <template v-else>
-    <p>loading...</p>
-  </template>
+  <RouterView v-if="isMapInitialized" />
+  <transition name="fade">
+    <p v-show="!isMapInitialized">loading...</p>
+  </transition>
 </template>
 
 <script lang="ts">
@@ -21,7 +19,7 @@ export default defineComponent({
         return;
       }
 
-      window.initMap = () => {
+      window.initMap = async (): Promise<void> => {
         isMapInitialized.value = true;
       };
 
@@ -37,4 +35,15 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import 'resources';
+
+.fade-enter-active,
+.fade-leave-active {
+  will-change: opacity;
+  transition: opacity 0.2s 1s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
