@@ -16,9 +16,5 @@ export const route = createRouter({
       path: PAGES.MAP,
       component: MapPage,
     },
-    {
-      path: PAGES.MAP_FACILITY,
-      component: MapPage,
-    }
   ],
 });

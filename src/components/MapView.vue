@@ -8,10 +8,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, watch, onMounted, PropType } from 'vue';
+import { defineComponent, ref, watch, onMounted, PropType } from 'vue';
 import sheltersData from '../assets/shelters.json';
 import { nonNullable } from '../utils/nonNullable';
-import { Shelter, MapPosition } from '../types';
+import { Shelter } from '../types';
 
 export default defineComponent({
   name: 'MapView',
@@ -40,8 +40,6 @@ export default defineComponent({
     const mapView = ref<HTMLDivElement>();
     const map = ref<L.Map>();
     const markers = ref<L.Marker[]>([]);
-    const centerPosition = ref<MapPosition | null>(null);
-    const shelter = computed(() => props.shelters.find((shelter) => shelter.id === props.shelterId));
 
     /** マーカーを初期化する */
     const initializeMarkers = (): void => {
@@ -87,8 +85,8 @@ export default defineComponent({
         maxZoom: 18,
         minZoom: 14,
         maxBounds: [
-          [35.716883, 140.017721],
-          [35.488466, 140.308555],
+          [35.733313, 139.985326],
+          [35.466086, 140.324025],
         ],
         layers: [tileLayer],
       });
@@ -99,42 +97,6 @@ export default defineComponent({
     // 再描画の依存注入
     watch(() => props.shelters, () => {
       initializeMarkers();
-    });
-
-    watch(() => shelter.value, async (shelter) => {
-      if (!map.value) {
-        return;
-      }
-
-      if (shelter) {
-        const center = map.value.getCenter();
-
-        centerPosition.value = {
-          latitude: center.lat,
-          longitude: center.lng,
-          zoom: map.value.getZoom(),
-        }
-
-        const { latitude, longitude } = shelter;
-
-        map.value.dragging.disable();
-        map.value.touchZoom.disable();
-        map.value.doubleClickZoom.disable();
-        map.value.scrollWheelZoom.disable();
-
-        map.value.flyTo(new window.L.LatLng(latitude, longitude), 18, { animate: false });
-      } else if (centerPosition.value) {
-        const { latitude, longitude, zoom } = centerPosition.value;
-
-        centerPosition.value = null;
-
-        map.value.flyTo(new window.L.LatLng(latitude, longitude), zoom, { animate: false });
-
-        map.value.dragging.enable();
-        map.value.touchZoom.enable();
-        map.value.doubleClickZoom.enable();
-        map.value.scrollWheelZoom.enable();
-      }
     });
 
     const onClickMarker = (shelter: Shelter) => {

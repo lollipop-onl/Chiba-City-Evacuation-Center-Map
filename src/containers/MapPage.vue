@@ -6,15 +6,14 @@
       :shelterId="shelterId"
       @clickFacility="onClickFacility"
     />
-    <div class="navbar">
-      <p>Navbar</p>
-    </div>
+    <MapNavbar class="navbar" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref, computed, onMounted } from 'vue';
 import MapView from '../components/MapView.vue';
+import MapNavbar from '../components/MapNavbar.vue';
 import { Shelter } from '../types';
 import { nonNullable } from '../utils/nonNullable';
 
@@ -22,6 +21,7 @@ export default defineComponent({
   name: 'MapPage',
   components: {
     MapView,
+    MapNavbar,
   },
   setup() {
     const shelters = ref<Shelter[]>([]);
