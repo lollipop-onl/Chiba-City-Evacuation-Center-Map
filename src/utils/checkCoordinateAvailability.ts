@@ -8,10 +8,12 @@ import { AVAILABLE_COORDINATE_RANGE } from '../const';
 export const checkCoordinateAvailability = (latitude: number, longitude: number): boolean => {
   const [[north, west], [south, east]] = AVAILABLE_COORDINATE_RANGE;
 
+  console.log([[north, west], [south, east]], latitude, longitude);
+
   return (
     north >= latitude &&
     south <= latitude &&
-    west >= longitude &&
-    east <= longitude
+    west <= longitude &&
+    east >= longitude
   );
 };
