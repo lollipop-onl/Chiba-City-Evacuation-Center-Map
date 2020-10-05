@@ -96,6 +96,20 @@ export default defineComponent({
     overflow-y: auto;
   }
 
+  & > .menu::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  & > .menu::-webkit-scrollbar-track {
+    margin: 8px 0 64px 0;
+    background: #041122;
+  }
+
+  & > .menu::-webkit-scrollbar-thumb {
+    background: rgba(#fff, 0.2);
+    border-radius: 2px;
+  }
+
   & > .close {
     position: fixed;
     right: 0;
