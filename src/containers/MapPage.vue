@@ -25,7 +25,7 @@
       @click.stop="closeMenu"
     />
   </transition>
-  <transition name="menu-slide">
+  <transition name="menu-fade">
     <MapMenu
       v-show="isMenuOpen"
       class="map-menu"
