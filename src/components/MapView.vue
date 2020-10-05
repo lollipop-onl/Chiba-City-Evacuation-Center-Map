@@ -84,8 +84,6 @@ export default defineComponent({
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       });
 
-      console.log(props.presentLocation);
-
       const center = props.presentLocation ?
         [props.presentLocation.latitude, props.presentLocation.longitude] as any :
         [35.607272, 140.106500];
@@ -108,6 +106,18 @@ export default defineComponent({
     // 再描画の依存注入
     watch(() => props.shelters, () => {
       initializeMarkers();
+    });
+
+    watch(() => props.presentLocation, (presentLocation) => {
+      if (!map.value || !presentLocation) {
+        return;
+      }
+
+      const { accuracy, latitude, longitude } = presentLocation;
+
+      window.L.circle([latitude, longitude], { radius: accuracy }).addTo(map.value);
+    }, {
+      immediate: true,
     });
 
     const onClickMarker = (shelter: Shelter) => {

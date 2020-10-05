@@ -63,38 +63,30 @@ export default defineComponent({
 
       shelters.value = data.shelters;
 
-      const timeoutTimer = setTimeout(() => {
-        isInitialized.value = true;
-      }, 5000);
-
       navigator.geolocation.watchPosition(
         (result) => {
-          console.log(result);
-
-          clearTimeout(timeoutTimer);
-
-          const { latitude, longitude, heading } = result.coords;
+          const { accuracy, latitude, longitude, heading } = result.coords;
 
           presentLocation.value = {
+            accuracy,
             latitude,
             longitude,
             heading,
           };
 
-          nextTick(() => {
-            isInitialized.value = true;
-          });
+          isInitialized.value = true;
         }, (error) => {
-          clearTimeout(timeoutTimer);
-
           console.error(error);
 
           presentLocation.value = null;
 
           isInitialized.value = true;
-        }
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 5000,
+        },
       );
-
     });
 
     const onClickFacility = (id: number): void => {

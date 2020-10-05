@@ -49,12 +49,12 @@ export default defineComponent({
   }
 
   & > .logo > .image.-main {
-    height: 40px;
-    margin: 0 auto 32px;
+    width: 240px;
+    margin: 0 auto 16px;
   }
 
   & > .logo > .image.-sub {
-    height: 20px;
+    width: 130px;
     margin: 0 auto;
   }
 }
