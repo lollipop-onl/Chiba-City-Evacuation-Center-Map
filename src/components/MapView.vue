@@ -11,7 +11,7 @@
 import { defineComponent, ref, watch, onMounted, PropType } from 'vue';
 import sheltersData from '../assets/shelters.json';
 import { nonNullable } from '../utils/nonNullable';
-import { Shelter } from '../types';
+import { PresentLocation, Shelter } from '../types';
 
 export default defineComponent({
   name: 'MapView',
@@ -24,6 +24,11 @@ export default defineComponent({
     /** 選択されている避難所Id */
     shelterId: {
       type: Number as PropType<number | null>,
+      default: null,
+    },
+    /** ユーザーの現在位置 */
+    presentLocation: {
+      type: Object as PropType<PresentLocation | null>,
       default: null,
     },
   },
@@ -79,8 +84,14 @@ export default defineComponent({
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       });
 
+      console.log(props.presentLocation);
+
+      const center = props.presentLocation ?
+        [props.presentLocation.latitude, props.presentLocation.longitude] as any :
+        [35.607272, 140.106500];
+
       map.value = window.L.map(mapView.value, {
-        center: [35.607272, 140.106500],
+        center,
         zoom: 17,
         maxZoom: 18,
         minZoom: 14,

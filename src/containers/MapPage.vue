@@ -1,31 +1,41 @@
 <template>
-  <div class="page-view">
+  <div
+    v-if="isInitialized"
+    class="page-view"
+  >
     <MapView
       class="map"
       :shelters="shelters"
       :shelterId="shelterId"
+      :presentLocation="presentLocation"
       @clickFacility="onClickFacility"
     />
     <MapNavbar class="navbar" />
   </div>
+  <transition name="fade">
+    <MapLoading v-if="!isInitialized" />
+  </transition>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, onMounted } from 'vue';
+import { defineComponent, ref, computed, onMounted, nextTick } from 'vue';
 import MapView from '../components/MapView.vue';
 import MapNavbar from '../components/MapNavbar.vue';
-import { Shelter } from '../types';
+import MapLoading from '../components/MapLoading.vue';
+import { PresentLocation, Shelter } from '../types';
 import { nonNullable } from '../utils/nonNullable';
 
 export default defineComponent({
-  name: 'MapPage',
   components: {
     MapView,
     MapNavbar,
+    MapLoading,
   },
   setup() {
+    const isInitialized = ref(false);
     const shelters = ref<Shelter[]>([]);
     const shelterId = ref<number | null>(null);
+    const presentLocation = ref<PresentLocation | null>(null);
     const shelter = computed(() => shelters.value.find((shelter) => shelter.id === shelterId.value));
     const nearbyShelters = computed(() => shelters.value
       .map((item) => {
@@ -52,6 +62,39 @@ export default defineComponent({
       const { default: data } = await import('../assets/shelters.json');
 
       shelters.value = data.shelters;
+
+      const timeoutTimer = setTimeout(() => {
+        isInitialized.value = true;
+      }, 5000);
+
+      navigator.geolocation.watchPosition(
+        (result) => {
+          console.log(result);
+
+          clearTimeout(timeoutTimer);
+
+          const { latitude, longitude, heading } = result.coords;
+
+          presentLocation.value = {
+            latitude,
+            longitude,
+            heading,
+          };
+
+          nextTick(() => {
+            isInitialized.value = true;
+          });
+        }, (error) => {
+          clearTimeout(timeoutTimer);
+
+          console.error(error);
+
+          presentLocation.value = null;
+
+          isInitialized.value = true;
+        }
+      );
+
     });
 
     const onClickFacility = (id: number): void => {
@@ -67,9 +110,11 @@ export default defineComponent({
     }
 
     return {
+      isInitialized,
       shelters,
       shelterId,
       shelter,
+      presentLocation,
       nearbyShelters,
       onClickFacility,
       backToMap,
@@ -80,6 +125,17 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import 'resources';
+
+.fade-enter-active,
+.fade-leave-active {
+  will-change: opacity;
+  transition: opacity 0.3s 0.2s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 
 .page-view {
   display: grid;

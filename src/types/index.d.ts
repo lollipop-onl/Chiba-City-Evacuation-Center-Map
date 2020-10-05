@@ -3,9 +3,9 @@ import { shelters } from '../assets/shelters.json';
 /** シェルターデータの型 */
 export type Shelter = typeof shelters[number];
 
-/** 中心座標 */
-export type MapPosition = {
+/** ユーザーの現在位置 */
+export type PresentLocation = {
   latitude: number;
   longitude: number;
-  zoom: number;
+  heading: number | null;
 };
