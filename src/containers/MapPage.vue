@@ -1,12 +1,15 @@
 <template>
-  <MapView
-    :shelters="shelters"
-    :shelterId="shelterId"
-    @clickFacility="onClickFacility"
-  />
-  <template v-if="shelterId != null">
-    <button @click.stop="backToMap">マップへ戻る</button>
-  </template>
+  <div class="page-view">
+    <MapView
+      class="map"
+      :shelters="shelters"
+      :shelterId="shelterId"
+      @clickFacility="onClickFacility"
+    />
+    <div class="navbar">
+      <p>Navbar</p>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -77,4 +80,23 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import 'resources';
+
+.page-view {
+  display: grid;
+  grid-template:
+    'map'    1fr
+    'navbar' auto
+    /1fr;
+  width: 100vw;
+  height: 100vh;
+
+  & > .map {
+    grid-area: map;
+    height: 100%;
+  }
+
+  & > .navbar {
+    grid-area: navbar;
+  }
+}
 </style>

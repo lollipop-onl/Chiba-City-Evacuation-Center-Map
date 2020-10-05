@@ -10,10 +10,8 @@
 <script lang="ts">
 import { defineComponent, ref, computed, watch, onMounted, PropType } from 'vue';
 import sheltersData from '../assets/shelters.json';
-import { ShelterMarker } from '../utils/ShelterMarker';
 import { nonNullable } from '../utils/nonNullable';
 import { Shelter, MapPosition } from '../types';
-import { noop } from '../utils/noop';
 
 export default defineComponent({
   name: 'MapView',
@@ -40,8 +38,8 @@ export default defineComponent({
   },
   setup(props, { emit }) {
     const mapView = ref<HTMLDivElement>();
-    const map = ref<google.maps.Map<HTMLDivElement>>();
-    const markers = ref<ShelterMarker[]>([]);
+    const map = ref<L.Map>();
+    const markers = ref<L.Marker[]>([]);
     const centerPosition = ref<MapPosition | null>(null);
     const shelter = computed(() => props.shelters.find((shelter) => shelter.id === props.shelterId));
 
@@ -57,7 +55,18 @@ export default defineComponent({
             return;
           }
 
-          return new ShelterMarker(shelter, map.value, onClickMarker);
+          const { name, latitude, longitude } = shelter;
+
+          return window.L
+            .marker([latitude, longitude], {
+              title: name,
+              alt: `${latitude},${longitude}`,
+              riseOnHover: true,
+            })
+            .addTo(map.value)
+            .on('click', () => {
+              onClickMarker(shelter);
+            });
         })
         .filter(nonNullable);
     }
@@ -68,15 +77,20 @@ export default defineComponent({
         return;
       }
 
-      map.value = new google.maps.Map(mapView.value, {
+      const tileLayer = window.L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      });
+
+      map.value = window.L.map(mapView.value, {
+        center: [35.607272, 140.106500],
         zoom: 17,
-        minZoom: 15,
-        center: { lat: 35.607272, lng: 140.106500 },
-        mapTypeId: google.maps.MapTypeId.TERRAIN,
-        clickableIcons: false,
-        zoomControl: false,
-        disableDefaultUI: true,
-        disableDoubleClickZoom: true,
+        maxZoom: 18,
+        minZoom: 14,
+        maxBounds: [
+          [35.716883, 140.017721],
+          [35.488466, 140.308555],
+        ],
+        layers: [tileLayer],
       });
 
       initializeMarkers();
@@ -92,33 +106,34 @@ export default defineComponent({
         return;
       }
 
-      map.value.setOptions({
-        draggable: !shelter,
-        scrollwheel: !shelter,
-      });
-
       if (shelter) {
         const center = map.value.getCenter();
 
         centerPosition.value = {
-          latitude: center.lat(),
-          longitude: center.lng(),
+          latitude: center.lat,
+          longitude: center.lng,
           zoom: map.value.getZoom(),
         }
 
-        map.value.setCenter(new google.maps.LatLng(shelter.latitude, shelter.longitude));
-        map.value.setZoom(18);
+        const { latitude, longitude } = shelter;
 
-        markers.value.forEach((marker) => marker.setActivation(props.shelterId === marker.shelter.id));
+        map.value.dragging.disable();
+        map.value.touchZoom.disable();
+        map.value.doubleClickZoom.disable();
+        map.value.scrollWheelZoom.disable();
+
+        map.value.flyTo(new window.L.LatLng(latitude, longitude), 18, { animate: false });
       } else if (centerPosition.value) {
         const { latitude, longitude, zoom } = centerPosition.value;
 
         centerPosition.value = null;
 
-        map.value.setCenter(new google.maps.LatLng(latitude, longitude));
-        map.value.setZoom(zoom);
+        map.value.flyTo(new window.L.LatLng(latitude, longitude), zoom, { animate: false });
 
-        markers.value.forEach((marker) => marker.setActivation(false));
+        map.value.dragging.enable();
+        map.value.touchZoom.enable();
+        map.value.doubleClickZoom.enable();
+        map.value.scrollWheelZoom.enable();
       }
     });
 
@@ -149,7 +164,7 @@ export default defineComponent({
 .map-view {
   & > .map {
     width: 100%;
-    height: 300px;
+    height: 100%;
   }
 
   /* stylelint-disable rscss/no-descendant-combinator, rscss/class-format */
