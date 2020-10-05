@@ -165,7 +165,7 @@ export default defineComponent({
       height: $marker-size;
       color: #fff;
       cursor: pointer;
-      background: #FF005B;
+      background: #ff005b;
       filter: drop-shadow(0 3px 5px rgba(#000, 0.2));
       border: 0;
       border-radius: 50%;
@@ -187,7 +187,7 @@ export default defineComponent({
       width: $marker-size;
       height: $marker-size;
       content: '';
-      border: 2px dashed #FF005B;
+      border: 2px dashed #ff005b;
       border-radius: 50%;
       transform: translate(-50%, -50%);
     }
@@ -196,7 +196,7 @@ export default defineComponent({
       width: 50px;
       height: 50px;
       font-size: 2em;
-      color: #FF005B;
+      color: #ff005b;
       background: transparent;
     }
 
