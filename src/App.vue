@@ -11,12 +11,30 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { debounce } from 'throttle-debounce';
+import { defineComponent, ref, onMounted, onUnmounted } from 'vue';
 
 export default defineComponent({
   name: 'App',
   setup() {
     const isMapInitialized = ref(true);
+    const setBaseVh = debounce(100, (): void => {
+      const vh = window.innerHeight * 0.01;
+      const { documentElement } = document;
+
+      if (documentElement instanceof HTMLElement) {
+        documentElement.style.setProperty('--vh', `${vh}px`);
+      }
+    });
+
+    onMounted(() => {
+      window.addEventListener('resize', setBaseVh);
+      setBaseVh();
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener('resize', setBaseVh);
+    });
 
     return {
       isMapInitialized,
