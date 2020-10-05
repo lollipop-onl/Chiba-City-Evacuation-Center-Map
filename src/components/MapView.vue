@@ -45,6 +45,8 @@ export default defineComponent({
     const mapView = ref<HTMLDivElement>();
     const map = ref<L.Map>();
     const markers = ref<L.Marker[]>([]);
+    const presentMarker = ref<L.Marker | null>(null);
+    const accuracyCircle = ref<L.Circle | null>(null);
 
     /** マーカーを初期化する */
     const initializeMarkers = (): void => {
@@ -110,12 +112,26 @@ export default defineComponent({
 
     watch(() => props.presentLocation, (presentLocation) => {
       if (!map.value || !presentLocation) {
+        presentMarker.value = null;
+        accuracyCircle.value = null;
+
         return;
       }
 
       const { accuracy, latitude, longitude } = presentLocation;
 
-      window.L.circle([latitude, longitude], { radius: accuracy }).addTo(map.value);
+      if (presentMarker.value) {
+        presentMarker.value.setLatLng([latitude, longitude]);
+      } else {
+        presentMarker.value = window.L.marker([latitude, longitude]).addTo(map.value);
+      }
+
+      if (accuracyCircle.value) {
+        accuracyCircle.value.setLatLng([latitude, longitude]);
+        accuracyCircle.value.setRadius(accuracy);
+      } else {
+        accuracyCircle.value = window.L.circle([latitude, longitude], { radius: accuracy }).addTo(map.value);
+      }
     }, {
       immediate: true,
     });
