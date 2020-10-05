@@ -16,5 +16,9 @@ export const route = createRouter({
       path: PAGES.MAP,
       component: MapPage,
     },
+    {
+      path: PAGES.MAP_MENU,
+      component: MapPage,
+    },
   ],
 });

@@ -15,27 +15,47 @@
   <transition name="fade">
     <MapLoading v-if="!isInitialized" />
   </transition>
+  <transition name="menu-fade">
+    <div
+      v-show="isMenuOpen"
+      class="menu-foundation"
+      @click.stop="closeMenu"
+    />
+  </transition>
+  <transition name="menu-slide">
+    <MapMenu
+      v-show="isMenuOpen"
+      class="map-menu"
+    />
+  </transition>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, onMounted, nextTick } from 'vue';
+import { defineComponent, ref, computed, onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import MapView from '../components/MapView.vue';
 import MapNavbar from '../components/MapNavbar.vue';
 import MapLoading from '../components/MapLoading.vue';
+import MapMenu from '../components/MapMenu.vue';
 import { PresentLocation, Shelter } from '../types';
 import { nonNullable } from '../utils/nonNullable';
+import { url } from '../utils/url';
 
 export default defineComponent({
   components: {
     MapView,
     MapNavbar,
     MapLoading,
+    MapMenu,
   },
   setup() {
+    const router = useRouter();
+    const route = useRoute();
     const isInitialized = ref(false);
     const shelters = ref<Shelter[]>([]);
     const shelterId = ref<number | null>(null);
     const presentLocation = ref<PresentLocation | null>(null);
+    const isMenuOpen = computed((): boolean => route.path === url('MAP_MENU'));
     const shelter = computed(() => shelters.value.find((shelter) => shelter.id === shelterId.value));
     const nearbyShelters = computed(() => shelters.value
       .map((item) => {
@@ -101,8 +121,13 @@ export default defineComponent({
       shelterId.value = null;
     }
 
+    const closeMenu = async (): Promise<void> => {
+      await router.replace(url('MAP'));
+    };
+
     return {
       isInitialized,
+      isMenuOpen,
       shelters,
       shelterId,
       shelter,
@@ -110,6 +135,7 @@ export default defineComponent({
       nearbyShelters,
       onClickFacility,
       backToMap,
+      closeMenu,
     }
   }
 });
@@ -124,8 +150,29 @@ export default defineComponent({
   transition: opacity 0.3s 0.2s ease;
 }
 
-.fade-enter,
+.fade-enter-from,
 .fade-leave-to {
+  opacity: 0;
+}
+
+.menu-slide-enter-active,
+.menu-slide-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu-slide-enter-from,
+.menu-slide-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.menu-fade-enter-active,
+.menu-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.menu-fade-enter-from,
+.menu-fade-leave-to {
   opacity: 0;
 }
 
@@ -147,5 +194,23 @@ export default defineComponent({
   & > .navbar {
     grid-area: navbar;
   }
+}
+
+.map-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.menu-foundation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background: rgba(#041122, 0.5);
 }
 </style>
