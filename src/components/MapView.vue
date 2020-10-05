@@ -10,6 +10,7 @@
 <script lang="ts">
 import { defineComponent, ref, watch, onMounted, PropType } from 'vue';
 import sheltersData from '../assets/shelters.json';
+import { AVAILABLE_COORDINATE_RANGE } from '../const';
 import { nonNullable } from '../utils/nonNullable';
 import { PresentLocation, Shelter } from '../types';
 
@@ -37,7 +38,7 @@ export default defineComponent({
      * 避難所がクリックされた
      * @param shelterId 施設ID
      */
-    clickFacility: (shelterId: number): boolean => {
+    clickShelter: (shelterId: number): boolean => {
       return shelterId != null;
     },
   },
@@ -95,10 +96,7 @@ export default defineComponent({
         zoom: 17,
         maxZoom: 18,
         minZoom: 14,
-        maxBounds: [
-          [35.733313, 139.985326],
-          [35.466086, 140.324025],
-        ],
+        maxBounds: AVAILABLE_COORDINATE_RANGE,
         layers: [tileLayer],
       });
 
@@ -137,7 +135,7 @@ export default defineComponent({
     });
 
     const onClickMarker = (shelter: Shelter) => {
-      emit('clickFacility', shelter.id);
+      emit('clickShelter', shelter.id);
     };
 
     return {

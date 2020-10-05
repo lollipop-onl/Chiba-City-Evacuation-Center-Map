@@ -8,7 +8,7 @@
       :shelters="shelters"
       :shelterId="shelterId"
       :presentLocation="presentLocation"
-      @clickFacility="onClickFacility"
+      @clickShelter="onClickShelter"
     />
     <MapNavbar
       class="navbar"
@@ -29,6 +29,9 @@
     <MapMenu
       v-show="isMenuOpen"
       class="map-menu"
+      :shelters="shelters"
+      :presentLocation="presentLocation"
+      @close="closeMenu"
     />
   </transition>
 </template>
@@ -41,7 +44,6 @@ import MapNavbar from '../components/MapNavbar.vue';
 import MapLoading from '../components/MapLoading.vue';
 import MapMenu from '../components/MapMenu.vue';
 import { PresentLocation, Shelter } from '../types';
-import { nonNullable } from '../utils/nonNullable';
 import { url } from '../utils/url';
 
 export default defineComponent({
@@ -56,30 +58,14 @@ export default defineComponent({
     const route = useRoute();
     const isInitialized = ref(false);
     const shelters = ref<Shelter[]>([]);
-    const shelterId = ref<number | null>(null);
     const presentLocation = ref<PresentLocation | null>(null);
     const isMenuOpen = computed((): boolean => route.path === url('MAP_MENU'));
+    const shelterId = computed(() => {
+      const { shelterId } = route.params;
+
+      return typeof shelterId === 'string' ? +shelterId : null;
+    });
     const shelter = computed(() => shelters.value.find((shelter) => shelter.id === shelterId.value));
-    const nearbyShelters = computed(() => shelters.value
-      .map((item) => {
-        if (!shelter.value) {
-          return;
-        }
-
-        const lat1 = shelter.value.latitude * Math.PI / 180;
-        const lng1 = shelter.value.longitude * Math.PI / 180;
-        const lat2 = item.latitude * Math.PI / 180;
-        const lng2 = item.longitude * Math.PI / 180;
-        const distance = 6371000 * Math.acos(Math.cos(lat1) * Math.cos(lat2) * Math.cos(lng2 - lng1) + Math.sin(lat1) * Math.sin(lat2));
-
-        return {
-          shelter: item,
-          distance,
-        };
-      })
-      .filter(nonNullable)
-      .sort((item1, item2) => item1.distance > item2.distance ? 1 : -1)
-    );
 
     onMounted(async (): Promise<void> => {
       const { default: data } = await import('../assets/shelters.json');
@@ -112,20 +98,16 @@ export default defineComponent({
       );
     });
 
-    const onClickFacility = (id: number): void => {
-      if (shelterId.value != null) {
-        return;
-      }
-
-      shelterId.value = id;
+    const onClickShelter = async (id: number): Promise<void> => {
+      await router.push(url('MAP_SHELTER', { shelterId: id }));
     }
 
-    const backToMap = (): void => {
-      shelterId.value = null;
+    const backToMap = async (): Promise<void> => {
+      await router.push(url('MAP'));
     }
 
     const openMenu = async (): Promise<void> => {
-      await router.replace(url('MAP_MENU'));
+      await router.push(url('MAP_MENU'));
     };
 
     const closeMenu = async (): Promise<void> => {
@@ -139,8 +121,7 @@ export default defineComponent({
       shelterId,
       shelter,
       presentLocation,
-      nearbyShelters,
-      onClickFacility,
+      onClickShelter,
       backToMap,
       openMenu,
       closeMenu,
