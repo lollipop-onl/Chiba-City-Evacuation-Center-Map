@@ -13,3 +13,5 @@ rules:
         normal: always
         component: always
   vue/singleline-html-element-content-newline: 'off'
+  vue/attribute-hyphenation: 'off'
+  vue/custom-event-name-casing: 'off'

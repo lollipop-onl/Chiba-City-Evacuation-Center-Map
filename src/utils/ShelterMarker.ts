@@ -1,15 +1,22 @@
 import { Shelter } from '../types';
+import { noop } from './noop';
+
+type MarkerHandler = (shelter: Shelter) => void;
 
 /** シェルターのマーカー */
 export class ShelterMarker extends google.maps.OverlayView {
   /** マーカーの要素 */
-  private markerElement?: HTMLButtonElement;
+  private markerElement?: HTMLDivElement | null;
 
   /**
    * @constructor
    * @param shelter シェルターデータ
    */
-  constructor(public readonly shelter: Shelter, map: google.maps.Map) {
+  constructor(
+    public readonly shelter: Shelter,
+    map: google.maps.Map,
+    private readonly onClick: MarkerHandler = noop
+  ) {
     super();
 
     this.setMap(map);
@@ -17,10 +24,22 @@ export class ShelterMarker extends google.maps.OverlayView {
 
   /** ライフサイクル */
   public onAdd(): void {
-    this.markerElement = document.createElement('button');
+    this.markerElement = document.createElement('div');
 
     this.markerElement.classList.add('shelter-marker');
-    this.markerElement.textContent = this.shelter.name;
+
+    const button = document.createElement('button');
+
+    button.classList.add('marker');
+
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      this.onClick(this.shelter);
+    });
+
+    this.markerElement.appendChild(button);
 
     const panes = this.getPanes();
 
@@ -42,19 +61,16 @@ export class ShelterMarker extends google.maps.OverlayView {
     this.markerElement.style.left = `${position.x}px`;
   }
 
-  /**
-   * 表示状態を設定する
-   * @param isVisible trueでマーカーを表示
-   */
-  public setVisibility(isVisible: boolean): void {
+  /** アクティブなマーカーを設定する */
+  public setActivation(flag: boolean): void {
     if (!this.markerElement) {
       return;
     }
 
-    if (isVisible) {
-      this.markerElement.classList.remove('-hidden');
+    if (flag) {
+      this.markerElement.classList.add('-active');
     } else {
-      this.markerElement.classList.add('-hidden');
+      this.markerElement.classList.remove('-active');
     }
   }
 }
