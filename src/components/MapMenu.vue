@@ -57,7 +57,7 @@ export default defineComponent({
           shelter,
         }) : null)
         .filter(nonNullable)
-        .sort((a, b) => a > b ? 1 : -1);
+        .sort((a, b) => a.distance > b.distance ? 1 : -1);
     });
 
     console.log(nearbySheltersFromPresentLocation.value);
