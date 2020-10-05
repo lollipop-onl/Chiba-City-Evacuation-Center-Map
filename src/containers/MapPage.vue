@@ -10,7 +10,10 @@
       :presentLocation="presentLocation"
       @clickFacility="onClickFacility"
     />
-    <MapNavbar class="navbar" />
+    <MapNavbar
+      class="navbar"
+      @openMenu="openMenu"
+    />
   </div>
   <transition name="fade">
     <MapLoading v-if="!isInitialized" />
@@ -121,6 +124,10 @@ export default defineComponent({
       shelterId.value = null;
     }
 
+    const openMenu = async (): Promise<void> => {
+      await router.replace(url('MAP_MENU'));
+    };
+
     const closeMenu = async (): Promise<void> => {
       await router.replace(url('MAP'));
     };
@@ -135,6 +142,7 @@ export default defineComponent({
       nearbyShelters,
       onClickFacility,
       backToMap,
+      openMenu,
       closeMenu,
     }
   }
