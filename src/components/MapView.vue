@@ -83,7 +83,7 @@ export default defineComponent({
       }
 
       const tileLayer = window.L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        attribution: '&copy; <a href="http://osm.org/copyright" target="_blank" rel=”noopener noreferrer”>OpenStreetMap</a> contributors'
       });
 
       const center = props.presentLocation ?
