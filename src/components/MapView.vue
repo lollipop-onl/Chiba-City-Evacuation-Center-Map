@@ -9,7 +9,6 @@
 
 <script lang="ts">
 import { defineComponent, ref, onMounted } from 'vue';
-import { throttle } from 'throttle-debounce';
 import { ShelterMarker } from '../utils/ShelterMarker';
 import { nonNullable } from '../utils/nonNullable';
 
@@ -19,31 +18,6 @@ export default defineComponent({
     const mapView = ref<HTMLDivElement>();
     const map = ref<google.maps.Map<HTMLDivElement>>();
     const markers = ref<ShelterMarker[]>([]);
-    const hideHiddenMarker = throttle(500, (): void => {
-      const bounds = map.value?.getBounds();
-
-      if (!bounds) {
-        return;
-      }
-
-      const northEast = bounds.getNorthEast();
-      const southWest = bounds.getSouthWest();
-      const top = northEast.lng();
-      const right = southWest.lat();
-      const bottom = southWest.lng();
-      const left = northEast.lat();
-
-      markers.value.forEach((marker) => {
-        const { latitude: x, longitude: y } = marker.shelter;
-
-        marker.setVisibility(
-          top >= y &&
-          right <= x &&
-          bottom <= y &&
-          left >= x
-        );
-      });
-    });
 
     onMounted(async (): Promise<void> => {
       if (!mapView.value) {
@@ -74,12 +48,6 @@ export default defineComponent({
           return new ShelterMarker(shelter, map.value);
         })
         .filter(nonNullable);
-
-      map.value.addListener('bounds_changed', () => {
-        hideHiddenMarker();
-      });
-
-      hideHiddenMarker();
     });
 
     return {
