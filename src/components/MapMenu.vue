@@ -2,15 +2,18 @@
   <div class="map-menu">
     <div class="menu">
       <b>現在地付近の避難所</b>
-      <div
-        v-for="({ distance, shelter }) in nearbySheltersFromPresentLocation"
-        :key="shelter.id"
-      >
-        <p>{{ shelter.name }}<br />{{ distance }}m</p>
-        <RouterLink :to="url('MAP_SHELTER', { shelterId: shelter.id })">施設を表示</RouterLink>
-        <hr />
-      </div>
-      <br />
+      <template v-if="!nearbySheltersFromPresentLocation">現在位置が習得できませんでした</template>
+      <template v-else-if="nearbySheltersFromPresentLocation.length > 0">
+        <div
+          v-for="({ distance, shelter }) in nearbySheltersFromPresentLocation"
+          :key="shelter.id"
+        >
+          <p>{{ shelter.name }}<br />{{ distance }}m</p>
+          <RouterLink :to="url('MAP_SHELTER', { shelterId: shelter.id })">施設を表示</RouterLink>
+          <hr />
+        </div>
+      </template>
+      <template v-else>近くに避難所がありません。</template>
     </div>
     <button
       class="close"
@@ -50,17 +53,24 @@ export default defineComponent({
     close: null,
   },
   setup(props, { emit }) {
-    const nearbySheltersFromPresentLocation = computed((): ShelterWithDistance[] => {
+    const nearbySheltersFromPresentLocation = computed((): ShelterWithDistance[] | null => {
+      if (!props.presentLocation) {
+        return null;
+      }
+
+      if (!checkCoordinateAvailability(props.presentLocation.latitude, props.presentLocation.longitude)) {
+        return [];
+      }
+
       return props.shelters
         .map((shelter) => props.presentLocation ? ({
           distance: getDistanceFromLatLng([shelter.latitude, shelter.longitude], [props.presentLocation.latitude, props.presentLocation.longitude]),
           shelter,
         }) : null)
         .filter(nonNullable)
-        .sort((a, b) => a.distance > b.distance ? 1 : -1);
+        .sort((a, b) => a.distance > b.distance ? 1 : -1)
+        .slice(0, 5);
     });
-
-    console.log(nearbySheltersFromPresentLocation.value);
 
     const closeMenu = () => {
       emit('close');
