@@ -1,14 +1,16 @@
 <template>
-  <div>map page</div>
+  <MapView />
+  <RouterLink to="/map/facility/123">To facility</RouterLink>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import MapView from '../components/MapView.vue';
 
 export default defineComponent({
   name: 'MapPage',
-  setup() {
-    // do nothing
+  components: {
+    MapView,
   },
 });
 </script>
