@@ -36,8 +36,8 @@ export default defineComponent({
   place-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #21D4FD;
-  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
 
   & > .logo {
     filter: drop-shadow(0 2px 5px rgba(#000, 0.5));
