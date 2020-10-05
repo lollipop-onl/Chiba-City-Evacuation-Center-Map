@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --config vite.config.ts",
-    "build": "vite build",
+    "build": "vite build && mv dist/index.html dist/404.html",
     "lint:js": "eslint --ext vue,ts .",
     "lint:css": "stylelint \"**/*.{vue,scss}\""
   },
