@@ -16,6 +16,6 @@
   "start_url": "https://chiba-shelter-map.lollipop.onl/map",
   "theme_color": "#041122",
   "background_color": "#041122",
-  "display": "fullscreen",
+  "display": "minimal-ui",
   "orientation": "portrait"
 }
