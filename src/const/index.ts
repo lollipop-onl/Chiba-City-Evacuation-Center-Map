@@ -11,4 +11,4 @@ export const PAGES = {
 export const AVAILABLE_COORDINATE_RANGE = [
   [35.733313, 139.985326],
   [35.466086, 140.324025],
-];
+] as L.BoundsLiteral;

@@ -46,6 +46,7 @@ export default defineComponent({
     const mapView = ref<HTMLDivElement>();
     const map = ref<L.Map>();
     const markers = ref<L.Marker[]>([]);
+    const zoomLevel = ref<number>(0);
     const presentMarker = ref<L.Marker | null>(null);
     const accuracyCircle = ref<L.Circle | null>(null);
 
@@ -87,8 +88,8 @@ export default defineComponent({
         attribution: '&copy; <a href="http://osm.org/copyright" target="_blank" rel=”noopener noreferrer”>OpenStreetMap</a> contributors'
       });
 
-      const center = props.presentLocation ?
-        [props.presentLocation.latitude, props.presentLocation.longitude] as any :
+      const center: [number, number] = props.presentLocation ?
+        [props.presentLocation.latitude, props.presentLocation.longitude]:
         [35.607272, 140.106500];
 
       map.value = window.L.map(mapView.value, {
@@ -98,6 +99,13 @@ export default defineComponent({
         minZoom: 14,
         maxBounds: AVAILABLE_COORDINATE_RANGE,
         layers: [tileLayer],
+        zoomControl: false,
+      });
+
+      zoomLevel.value = map.value.getZoom() - 14;
+
+      map.value.on('zoomend', ({ target }) => {
+        zoomLevel.value = target.getZoom() - 14;
       });
 
       initializeMarkers();
@@ -106,6 +114,14 @@ export default defineComponent({
     // 再描画の依存注入
     watch(() => props.shelters, () => {
       initializeMarkers();
+    });
+
+    watch(() => zoomLevel.value, (zoomLevel) => {
+      if (!map.value) {
+        return;
+      }
+
+      map.value.setZoom(zoomLevel + 14);
     });
 
     watch(() => props.presentLocation, (presentLocation) => {
@@ -140,6 +156,7 @@ export default defineComponent({
 
     return {
       mapView,
+      zoomLevel,
     }
   },
 });
@@ -159,9 +176,18 @@ export default defineComponent({
 }
 
 .map-view {
+  position: relative;
+
   & > .map {
     width: 100%;
     height: 100%;
+  }
+
+  & > .scalerange {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 400;
   }
 
   /* stylelint-disable rscss/no-descendant-combinator, rscss/class-format */
