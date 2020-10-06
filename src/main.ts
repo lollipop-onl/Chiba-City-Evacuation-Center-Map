@@ -17,6 +17,12 @@ const setBaseVh = debounce(100, (): void => {
 window.addEventListener('resize', setBaseVh);
 setBaseVh();
 
+window.addEventListener('load', () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+});
+
 const app = createApp(App)
 
 app.use(route);
