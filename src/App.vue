@@ -51,7 +51,6 @@ export default defineComponent({
   display: grid;
   place-items: center;
   width: 100%;
-
   background: #e5e5e5;
 
   & > .text {
