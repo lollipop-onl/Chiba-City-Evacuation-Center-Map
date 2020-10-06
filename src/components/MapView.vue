@@ -118,8 +118,9 @@ export default defineComponent({
         attribution: '&copy; <a href="http://osm.org/copyright" target="_blank" rel=”noopener noreferrer”>OpenStreetMap</a> contributors'
       });
 
-      const center: [number, number] = props.presentLocation ?
-        [props.presentLocation.latitude, props.presentLocation.longitude]:
+      const { presentLocation } = props;
+      const center: [number, number] = presentLocation ?
+        [presentLocation.latitude, presentLocation.longitude]:
         [35.607272, 140.106500];
 
       map.value = window.L.map(mapView.value, {

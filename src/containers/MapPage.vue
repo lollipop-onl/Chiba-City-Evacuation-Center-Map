@@ -54,6 +54,7 @@ import MapMenu from '../components/MapMenu.vue';
 import MapShelter from '../components/MapShelter.vue';
 import { PresentLocation, Shelter } from '../types';
 import { url } from '../utils/url';
+import { checkCoordinateAvailability } from '../utils/checkCoordinateAvailability';
 
 export default defineComponent({
   components: {
@@ -85,6 +86,12 @@ export default defineComponent({
       navigator.geolocation.watchPosition(
         (result) => {
           const { accuracy, latitude, longitude, heading } = result.coords;
+
+          if (!checkCoordinateAvailability(latitude, longitude)) {
+            presentLocation.value = null;
+
+            return;
+          }
 
           presentLocation.value = {
             accuracy,
