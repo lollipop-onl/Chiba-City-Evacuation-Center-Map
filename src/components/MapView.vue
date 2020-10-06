@@ -89,11 +89,11 @@ export default defineComponent({
       const targetCoordinate: [number, number] = isMobile
         ? [
           shelter.value.latitude - ((windowHeight - 64) / 2 - 80) * 0.000004278,
-          shelter.value.longitude - ((windowWidth - 400) / 2) * 0.000005405,
+          shelter.value.longitude,
         ]
         : [
           shelter.value.latitude,
-          shelter.value.longitude - 0.001,
+          shelter.value.longitude - ((windowWidth - 400) / 2) * 0.000005405,
         ];
 
       map.value.flyTo(

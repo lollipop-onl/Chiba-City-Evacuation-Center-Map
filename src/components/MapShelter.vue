@@ -94,8 +94,6 @@ $breakpoint: 600px;
   @media (max-width: $breakpoint) {
     width: 100%;
     height: calc(var(--vh, 1vh) * 100 - 180px);
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
   }
 
   & > .close {
