@@ -1,5 +1,5 @@
 <template>
-  <RouterView v-if="isMapInitialized" />
+  <RouterView />
 </template>
 
 <script lang="ts">
