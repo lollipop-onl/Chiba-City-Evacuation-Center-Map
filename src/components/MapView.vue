@@ -9,7 +9,6 @@
 
 <script lang="ts">
 import { defineComponent, ref, watch, onMounted, PropType, computed } from 'vue';
-import sheltersData from '../assets/shelters.json';
 import { AVAILABLE_COORDINATE_RANGE } from '../const';
 import { nonNullable } from '../utils/nonNullable';
 import { PresentLocation, Shelter } from '../types';
