@@ -189,7 +189,6 @@ export default defineComponent({
     'navbar' auto
     /1fr;
   width: 100vw;
-  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 
   & > .map {
@@ -208,7 +207,6 @@ export default defineComponent({
   right: 0;
   z-index: 1000;
   width: 320px;
-  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
 }
@@ -219,7 +217,6 @@ export default defineComponent({
   left: 0;
   z-index: 1000;
   width: 100vw;
-  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   background: rgba(#041122, 0.5);
 }

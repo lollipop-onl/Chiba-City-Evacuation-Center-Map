@@ -1,23 +1,14 @@
 <template>
   <RouterView v-if="isMapInitialized" />
-  <transition name="fade">
-    <div
-      v-show="!isMapInitialized"
-      class="loading-screen"
-    >
-      <div class="text">千葉市避難所マップ</div>
-    </div>
-  </transition>
 </template>
 
 <script lang="ts">
+import { defineComponent, onMounted, onUnmounted } from 'vue';
 import { debounce } from 'throttle-debounce';
-import { defineComponent, ref, onMounted, onUnmounted } from 'vue';
 
 export default defineComponent({
   name: 'App',
   setup() {
-    const isMapInitialized = ref(true);
     const setBaseVh = debounce(100, (): void => {
       const vh = window.innerHeight * 0.01;
       const { documentElement } = document;
@@ -35,10 +26,6 @@ export default defineComponent({
     onUnmounted(() => {
       window.removeEventListener('resize', setBaseVh);
     });
-
-    return {
-      isMapInitialized,
-    }
   },
 });
 </script>
@@ -64,7 +51,7 @@ export default defineComponent({
   display: grid;
   place-items: center;
   width: 100%;
-  height: 100%;
+
   background: #e5e5e5;
 
   & > .text {
