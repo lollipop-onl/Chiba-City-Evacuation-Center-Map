@@ -14,6 +14,13 @@
               v-if="shelter.id === shelterId"
               class="shelter"
             >
+              <div class="picture -no-image">
+                <img
+                  src="../assets/no-image.svg"
+                  alt="No Image"
+                  height="32"
+                />
+              </div>
               {{ shelter.name }}
               <br />
               〒{{ shelter.postalCode }} 千葉県{{ shelter.address }}
@@ -96,6 +103,28 @@ $breakpoint: 600px;
     height: calc(var(--vh, 1vh) * 100 - 180px);
   }
 
+  & > .shelter {
+    box-sizing: border-box;
+    width: 400px;
+    padding: 0 16px;
+
+    @media (max-width: $breakpoint) {
+      width: 100%;
+    }
+  }
+
+  & > .shelter > .picture {
+    width: calc(100% + 32px);
+    height: 240px;
+    margin-left: -16px;
+  }
+
+  & > .shelter > .picture.-no-image {
+    display: grid;
+    place-items: center;
+    background: #ccc;
+  }
+
   & > .close {
     position: absolute;
     top: 0;
@@ -104,6 +133,7 @@ $breakpoint: 600px;
     place-items: center;
     width: 64px;
     height: 64px;
+    filter: drop-shadow(0 0 10px rgba(#252521, 0.8));
   }
 
   & > .close::before,
@@ -114,7 +144,7 @@ $breakpoint: 600px;
     width: 24px;
     height: 2px;
     content: '';
-    background: #252521;
+    background: #fff;
     border-radius: 2px;
     transition: width 0.12s ease;
     transform: translate(-50%, -50%);
