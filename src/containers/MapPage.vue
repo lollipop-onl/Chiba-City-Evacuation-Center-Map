@@ -89,6 +89,7 @@ export default defineComponent({
 
           if (!checkCoordinateAvailability(latitude, longitude)) {
             presentLocation.value = null;
+            isInitialized.value = true;
 
             return;
           }
