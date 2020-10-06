@@ -79,6 +79,24 @@ export default defineComponent({
         .filter(nonNullable);
     }
 
+    const flyToShelter = (animate = true): void => {
+      if (!shelter.value || !map.value) {
+        return;
+      }
+
+      const offset = ((window.innerHeight - 64) / 2 - 100) * 0.000004278;
+
+      map.value.flyTo(
+        [shelter.value.latitude - offset, shelter.value.longitude],
+        18,
+        { animate },
+      );
+    };
+
+    const onClickMarker = (shelter: Shelter) => {
+      emit('clickShelter', shelter.id);
+    };
+
     /** ライフサイクルフック */
     onMounted(async (): Promise<void> => {
       if (!mapView.value) {
@@ -110,6 +128,7 @@ export default defineComponent({
       });
 
       initializeMarkers();
+      flyToShelter(false);
     });
 
     // 再描画の依存注入
@@ -151,19 +170,7 @@ export default defineComponent({
       immediate: true,
     });
 
-    watch([shelter, map], (): void => {
-      if (!shelter.value || !map.value) {
-        return;
-      }
-
-      const offset = ((window.innerHeight - 64) / 2 - 100) * 0.000004278;
-
-      map.value.flyTo([shelter.value.latitude - offset, shelter.value.longitude], 18);
-    });
-
-    const onClickMarker = (shelter: Shelter) => {
-      emit('clickShelter', shelter.id);
-    };
+    watch(shelter, flyToShelter, { immediate: true });
 
     return {
       mapView,
