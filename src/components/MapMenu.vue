@@ -95,10 +95,6 @@ export default defineComponent({
   height: calc(var(--vh, 1vh) * 100);
   color: #fff;
   background: #041122;
-  box-shadow:
-    0 0 5.3px rgba(0, 0, 0, 0.028),
-    0 0 17.9px rgba(0, 0, 0, 0.042),
-    0 0 80px rgba(0, 0, 0, 0.07);
 
   & > .menu {
     flex-grow: 1;
