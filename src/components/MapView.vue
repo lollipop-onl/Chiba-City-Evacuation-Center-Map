@@ -151,14 +151,14 @@ export default defineComponent({
       immediate: true,
     });
 
-    watch(() => shelter.value, (shelter): void => {
-      if (!shelter || !map.value) {
+    watch([shelter, map], (): void => {
+      if (!shelter.value || !map.value) {
         return;
       }
 
       const offset = ((window.innerHeight - 64) / 2 - 100) * 0.000004278;
 
-      map.value.flyTo([shelter.latitude - offset, shelter.longitude], 18);
+      map.value.flyTo([shelter.value.latitude - offset, shelter.value.longitude], 18);
     });
 
     const onClickMarker = (shelter: Shelter) => {
