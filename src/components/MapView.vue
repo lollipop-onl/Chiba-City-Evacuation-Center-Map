@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, watch, onMounted, PropType } from 'vue';
+import { defineComponent, ref, watch, onMounted, PropType, computed } from 'vue';
 import sheltersData from '../assets/shelters.json';
 import { AVAILABLE_COORDINATE_RANGE } from '../const';
 import { nonNullable } from '../utils/nonNullable';
@@ -49,6 +49,7 @@ export default defineComponent({
     const zoomLevel = ref<number>(0);
     const presentMarker = ref<L.Marker | null>(null);
     const accuracyCircle = ref<L.Circle | null>(null);
+    const shelter = computed(() => props.shelters.find((shelter) => shelter.id === props.shelterId));
 
     /** マーカーを初期化する */
     const initializeMarkers = (): void => {
@@ -124,7 +125,7 @@ export default defineComponent({
       map.value.setZoom(zoomLevel + 14);
     });
 
-    watch(() => props.presentLocation, (presentLocation) => {
+    watch(() => props.presentLocation, (presentLocation): void => {
       if (!map.value || !presentLocation) {
         presentMarker.value = null;
         accuracyCircle.value = null;
@@ -148,6 +149,16 @@ export default defineComponent({
       }
     }, {
       immediate: true,
+    });
+
+    watch(() => shelter.value, (shelter): void => {
+      if (!shelter || !map.value) {
+        return;
+      }
+
+      const offset = ((window.innerHeight - 64) / 2 - 100) * 0.000004278;
+
+      map.value.flyTo([shelter.latitude - offset, shelter.longitude], 18);
     });
 
     const onClickMarker = (shelter: Shelter) => {

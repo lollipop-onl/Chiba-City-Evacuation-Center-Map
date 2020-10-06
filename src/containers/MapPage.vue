@@ -15,6 +15,10 @@
       @openMenu="openMenu"
     />
   </div>
+  <MapShelter
+    :shelters="shelters"
+    :shelterId="shelterId"
+  />
   <transition name="fade">
     <MapLoading v-if="!isInitialized" />
   </transition>
@@ -47,6 +51,7 @@ import MapView from '../components/MapView.vue';
 import MapNavbar from '../components/MapNavbar.vue';
 import MapLoading from '../components/MapLoading.vue';
 import MapMenu from '../components/MapMenu.vue';
+import MapShelter from '../components/MapShelter.vue';
 import { PresentLocation, Shelter } from '../types';
 import { url } from '../utils/url';
 
@@ -56,6 +61,7 @@ export default defineComponent({
     MapNavbar,
     MapLoading,
     MapMenu,
+    MapShelter,
   },
   setup() {
     const router = useRouter();
