@@ -92,6 +92,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   width: 320px;
+  max-width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   color: #fff;
   background: #041122;

@@ -20,7 +20,10 @@
             </div>
           </transition>
         </template>
-        <RouterLink to="/map">閉じる</RouterLink>
+        <RouterLink
+          class="close"
+          to="/map"
+        />
       </div>
     </div>
   </transition>
@@ -89,14 +92,53 @@ $breakpoint: 600px;
   background: #f5f5f5;
 
   @media (max-width: $breakpoint) {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100 - 180px);
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+  }
+
+  & > .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+  }
+
+  & > .close::before,
+  & > .close::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 2px;
+    content: '';
+    background: #252521;
+    border-radius: 2px;
+    transition: width 0.12s ease;
+    transform: translate(-50%, -50%);
+  }
+
+  & > .close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  & > .close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  & > .close:hover::before,
+  & > .close:hover::after {
+    width: 32px;
   }
 }
 
 .card-enter-active,
 .card-leave-active {
-  transition: opacity 0.3s ease, width 0.3s ease;
+  transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
 
   & > .card {
     transition: transform 0.3s ease;
@@ -108,8 +150,17 @@ $breakpoint: 600px;
   width: 370px;
   opacity: 0;
 
+  @media (max-width: $breakpoint) {
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100 - 210px);
+  }
+
   & > .card {
     transform: translate3d(-30px, 0, 0);
+
+    @media (max-width: $breakpoint) {
+      transform: none;
+    }
   }
 }
 
