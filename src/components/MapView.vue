@@ -84,7 +84,7 @@ export default defineComponent({
         return;
       }
 
-      const offset = ((window.innerHeight - 64) / 2 - 100) * 0.000004278;
+      const offset = ((window.innerHeight - 64) / 2 - 80) * 0.000004278;
 
       map.value.flyTo(
         [shelter.value.latitude - offset, shelter.value.longitude],
@@ -170,7 +170,7 @@ export default defineComponent({
       immediate: true,
     });
 
-    watch(shelter, flyToShelter, { immediate: true });
+    watch(shelter, () => { flyToShelter(); }, { immediate: true });
 
     return {
       mapView,
