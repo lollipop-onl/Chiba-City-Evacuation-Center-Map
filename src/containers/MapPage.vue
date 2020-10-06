@@ -25,14 +25,18 @@
       @click.stop="closeMenu"
     />
   </transition>
-  <transition name="menu-fade">
-    <MapMenu
+  <transition name="menu-slide">
+    <div
       v-show="isMenuOpen"
       class="map-menu"
-      :shelters="shelters"
-      :presentLocation="presentLocation"
-      @close="closeMenu"
-    />
+    >
+      <MapMenu
+        class="menu"
+        :shelters="shelters"
+        :presentLocation="presentLocation"
+        @close="closeMenu"
+      />
+    </div>
   </transition>
 </template>
 
@@ -146,13 +150,20 @@ export default defineComponent({
 
 .menu-slide-enter-active,
 .menu-slide-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease;
+
+  & > .menu {
+    transition: transform 0.3s ease;
+  }
 }
 
 .menu-slide-enter-from,
 .menu-slide-leave-to {
   opacity: 0;
-  transform: translateX(100%);
+
+  & > .menu {
+    transform: translate3d(30px, 0, 0);
+  }
 }
 
 .menu-fade-enter-active,
@@ -190,6 +201,10 @@ export default defineComponent({
   top: 0;
   right: 0;
   z-index: 1000;
+  width: 320px;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
 }
 
 .menu-foundation {
