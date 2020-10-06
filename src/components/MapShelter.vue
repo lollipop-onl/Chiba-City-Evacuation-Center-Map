@@ -69,13 +69,12 @@ export default defineComponent({
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     box-shadow:
-  0 1px 1.9px rgba(0, 0, 0, 0.025),
-  0 2.5px 4.5px rgba(0, 0, 0, 0.036),
-  0 4.6px 8.4px rgba(0, 0, 0, 0.045),
-  0 8.3px 15px rgba(0, 0, 0, 0.054),
-  0 15.5px 28px rgba(0, 0, 0, 0.065),
-  0 37px 67px rgba(0, 0, 0, 0.09)
-;
+      0 1px 1.9px rgba(0, 0, 0, 0.025),
+      0 2.5px 4.5px rgba(0, 0, 0, 0.036),
+      0 4.6px 8.4px rgba(0, 0, 0, 0.045),
+      0 8.3px 15px rgba(0, 0, 0, 0.054),
+      0 15.5px 28px rgba(0, 0, 0, 0.065),
+      0 37px 67px rgba(0, 0, 0, 0.09);
   }
 }
 </style>
