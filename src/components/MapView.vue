@@ -84,10 +84,21 @@ export default defineComponent({
         return;
       }
 
-      const offset = ((window.innerHeight - 64) / 2 - 80) * 0.000004278;
+      const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
+      const isMobile = windowWidth <= 600;
+
+      const targetCoordinate: [number, number] = isMobile
+        ? [
+          shelter.value.latitude - ((windowHeight - 64) / 2 - 80) * 0.000004278,
+          shelter.value.longitude - ((windowWidth - 400) / 2) * 0.000005405,
+        ]
+        : [
+          shelter.value.latitude,
+          shelter.value.longitude - 0.001,
+        ];
 
       map.value.flyTo(
-        [shelter.value.latitude - offset, shelter.value.longitude],
+        targetCoordinate,
         18,
         { animate },
       );
