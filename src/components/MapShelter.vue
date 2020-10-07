@@ -388,18 +388,15 @@ $breakpoint: 600px;
 
 .fade-enter-active,
 .fade-leave-active {
+  position: absolute;
+  top: 0;
+  left: 0;
   transition: opacity 0.3s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
-
-.fade-leave-active {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 </style>
 
