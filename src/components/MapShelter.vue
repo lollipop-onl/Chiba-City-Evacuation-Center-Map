@@ -4,7 +4,10 @@
       v-show="shelterId != null"
       class="map-shelter-wrapper"
     >
-      <div class="card map-shelter-card">
+      <div
+        ref="shelterView"
+        class="card map-shelter-card"
+      >
         <template
           v-for="shelter in shelters"
           :key="shelter.id"
@@ -32,6 +35,7 @@
                 〒{{ shelter.postalCode }} 千葉県{{ shelter.address }}
               </div>
               <div class="separator" />
+              <div class="heading">避難所の情報</div>
               <pre>{{ shelter }}</pre>
               <div class="separator" />
               <div class="heading">付近の避難所</div>
@@ -42,14 +46,27 @@
                   class="item"
                 >
                   <button
-                    class="button"
+                    class="clickable-section"
                     @click.stop="changeShelter(nearbyShelter.shelter.id)"
                   >
-                    <span class="name">{{ nearbyShelter.shelter.name }}</span>
-                    <span class="distance">{{ Math.round(nearbyShelter.distance) }}m</span>
+                    <span class="main">{{ nearbyShelter.shelter.name }}</span>
+                    <span class="sub">{{ Math.round(nearbyShelter.distance) }}m</span>
                   </button>
                 </li>
               </ol>
+              <div class="separator" />
+              <div class="heading">Googleマップで開く</div>
+              <a
+                v-if="googleMapsUrl"
+                :href="googleMapsUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="clickable-section"
+              >
+                <span class="main">{{ shelter.name }}</span>
+                <span class="sub">{{ shelter.latitude }},{{ shelter.longitude }}</span>
+              </a>
+              <div class="separator" />
             </div>
           </transition>
         </template>
@@ -78,7 +95,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, PropType } from 'vue';
+import { defineComponent, computed, ref, watch, PropType } from 'vue';
+import urlJoin from 'url-join';
 import { Shelter } from '../types';
 import { getDistanceFromLatLng } from '../utils/getDistanceFromLatLng';
 import { nonNullable } from '../utils/nonNullable';
@@ -99,6 +117,7 @@ export default defineComponent({
     changeShelter: (shelterId: number) => !Number.isNaN(shelterId),
   },
   setup(props, { emit }) {
+    const shelterView = ref<HTMLDivElement>();
     const shelter = computed(() => props.shelters.find((shelter) => shelter.id === props.shelterId));
     const nearbyShelters = computed(() => {
       return props.shelters
@@ -110,13 +129,27 @@ export default defineComponent({
         .sort((a, b) => a.distance > b.distance ? 1 : -1)
         .slice(1, 6);
     });
+    const googleMapsUrl = computed((): string | null => shelter.value
+      ? urlJoin('https://www.google.co.jp/maps', `@${shelter.value.latitude},${shelter.value.longitude},19z`)
+      : null
+    );
 
     const changeShelter = (shelterId: number) => {
       emit('changeShelter', shelterId);
     };
 
+    watch(shelter, () => {
+      if (!shelterView.value) {
+        return;
+      }
+
+      shelterView.value.scrollTo(0, 0);
+    });
+
     return {
+      shelterView,
       nearbyShelters,
+      googleMapsUrl,
       changeShelter,
     };
   }
@@ -127,6 +160,50 @@ export default defineComponent({
 @import 'resources';
 
 $breakpoint: 600px;
+
+.clickable-section {
+  & {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    width: calc(100% + 32px);
+    padding: 16px 32px 16px 16px;
+    margin-left: -16px;
+    color: #252521;
+    text-align: left;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+  }
+
+  &::before {
+    $size: 10px;
+
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    content: '';
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    transform: rotate(45deg) translate(-$size / 1.41421356 / 2, -$size / 1.41421356 / 2);
+  }
+
+  & > .main {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  & > .sub {
+    display: block;
+    font-size: 12px;
+    color: #595959;
+  }
+}
 
 .map-shelter-wrapper {
   position: absolute;
@@ -307,9 +384,6 @@ $breakpoint: 600px;
 }
 
 .nearby-shelter {
-  width: calc(100% + 32px);
-  margin-left: -16px;
-
   & > .item:not(:first-child)::before {
     display: block;
     width: calc(100% - 32px);
@@ -318,85 +392,22 @@ $breakpoint: 600px;
     content: '';
     background: #ccc;
   }
-
-  & > .item > .button {
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 16px 32px 16px 16px;
-    text-align: left;
-    background: transparent;
-    border: 0;
-  }
-
-  & > .item > .button::before {
-    $size: 10px;
-
-    position: absolute;
-    top: 50%;
-    right: 18px;
-    box-sizing: border-box;
-    width: 10px;
-    height: 10px;
-    content: '';
-    border-top: 2px solid #ccc;
-    border-right: 2px solid #ccc;
-    transform: rotate(45deg) translate(-$size / 1.41421356 / 2, -$size / 1.41421356 / 2);
-  }
-
-  & > .item > .button > .name {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  & > .item > .button > .distance {
-    display: block;
-    font-size: 12px;
-    color: #595959;
-  }
-}
-
-.card-enter-active,
-.card-leave-active {
-  transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease;
-
-  & > .card {
-    transition: transform 0.3s ease;
-  }
-}
-
-.card-enter-from,
-.card-leave-to {
-  width: 370px;
-  opacity: 0;
-
-  @media (max-width: $breakpoint) {
-    width: 100%;
-    height: calc(var(--vh, 1vh) * 100 - 210px);
-  }
-
-  & > .card {
-    transform: translate3d(-30px, 0, 0);
-
-    @media (max-width: $breakpoint) {
-      transform: none;
-    }
-  }
 }
 
 .fade-enter-active,
 .fade-leave-active {
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: opacity 0.3s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.fade-leave-active {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 </style>
 
