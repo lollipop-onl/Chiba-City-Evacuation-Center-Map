@@ -21,9 +21,37 @@
                   height="32"
                 />
               </div>
-              {{ shelter.name }}
-              <br />
-              〒{{ shelter.postalCode }} 千葉県{{ shelter.address }}
+              <div class="name">{{ shelter.name }}</div>
+              <div class="address">
+                〒{{ shelter.postalCode }} 千葉県{{ shelter.address }}
+              </div>
+              <div class="categories">
+                <div
+                  class="tag"
+                  :class="{ '-active': shelter.category.evacuationArea }"
+                >
+                  避難場所
+                </div>
+                <div
+                  class="tag"
+                  :class="{ '-active': shelter.category.shelter }"
+                >
+                  避難所
+                </div>
+                <div
+                  class="tag"
+                  :class="{ '-active': shelter.category.wideAreaShelter }"
+                >
+                  広域避難場所
+                </div>
+                <div
+                  class="tag"
+                  :class="{ '-active': shelter.category.earthquakeRefugeBuilding }"
+                >
+                  津波避難ビル
+                </div>
+              </div>
+              <pre>{{ shelter }}</pre>
             </div>
           </transition>
         </template>
@@ -59,6 +87,23 @@ export default defineComponent({
 @import 'resources';
 
 $breakpoint: 600px;
+
+@mixin separation {
+  & {
+    position: relative;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: -16px;
+    display: block;
+    width: calc(100% + 32px);
+    height: 1px;
+    content: '';
+    background: #ccc;
+  }
+}
 
 .map-shelter-wrapper {
   position: absolute;
@@ -96,6 +141,8 @@ $breakpoint: 600px;
 .map-shelter-card {
   width: 400px;
   height: calc(var(--vh, 1vh) * 100 - 64px);
+  overflow-x: hidden;
+  overflow-y: auto;
   background: #f5f5f5;
 
   @media (max-width: $breakpoint) {
@@ -116,13 +163,48 @@ $breakpoint: 600px;
   & > .shelter > .picture {
     width: calc(100% + 32px);
     height: 240px;
-    margin-left: -16px;
+    margin: 0 0 32px -16px;
   }
 
   & > .shelter > .picture.-no-image {
     display: grid;
     place-items: center;
     background: #ccc;
+  }
+
+  & > .shelter > .name {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  & > .shelter > .address {
+    @include separation;
+
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.8;
+    color: #555;
+  }
+
+  & > .shelter > .categories {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  & > .shelter > .categories > .tag {
+    padding: 4px 12px;
+    margin: 0 8px 4px 0;
+    color: #aaa;
+    border: 2px solid #aaa;
+    border-radius: 8px;
+  }
+
+  & > .shelter > .categories > .tag.-active {
+    color: #fff;
+    background: #041122;
+    border-color: #041122;
   }
 
   & > .close {

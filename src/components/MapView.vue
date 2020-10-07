@@ -93,7 +93,7 @@ export default defineComponent({
         ]
         : [
           shelter.value.latitude,
-          shelter.value.longitude - ((windowWidth - 400) / 2) * 0.000005405,
+          shelter.value.longitude - (windowWidth / 2 - (windowWidth - 400) / 2) * 0.000005405,
         ];
 
       map.value.flyTo(
