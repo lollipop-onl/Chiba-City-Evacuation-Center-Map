@@ -386,9 +386,8 @@ $breakpoint: 600px;
 .nearby-shelter {
   & > .item:not(:first-child)::before {
     display: block;
-    width: calc(100% - 32px);
+    width: 100%;
     height: 1px;
-    margin: 0 auto;
     content: '';
     background: #ccc;
   }
