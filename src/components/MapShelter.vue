@@ -142,8 +142,9 @@ export default defineComponent({
           shelter: targetShelter,
         }) : null)
         .filter(nonNullable)
+        .filter(({ distance }) => distance > 0)
         .sort((a, b) => a.distance > b.distance ? 1 : -1)
-        .slice(1, 6);
+        .slice(0, 5);
     });
     const distanceFromPresentLocation = computed((): number | null =>
       props.presentLocation && shelter.value
