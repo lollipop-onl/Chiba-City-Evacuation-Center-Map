@@ -31,33 +31,25 @@
               <div class="address">
                 〒{{ shelter.postalCode }} 千葉県{{ shelter.address }}
               </div>
-              <div class="categories">
-                <div
-                  class="tag"
-                  :class="{ '-active': shelter.category.evacuationArea }"
-                >
-                  避難場所
-                </div>
-                <div
-                  class="tag"
-                  :class="{ '-active': shelter.category.shelter }"
-                >
-                  避難所
-                </div>
-                <div
-                  class="tag"
-                  :class="{ '-active': shelter.category.wideAreaShelter }"
-                >
-                  広域避難場所
-                </div>
-                <div
-                  class="tag"
-                  :class="{ '-active': shelter.category.earthquakeRefugeBuilding }"
-                >
-                  津波避難ビル
-                </div>
-              </div>
+              <div class="separator" />
               <pre>{{ shelter }}</pre>
+              <div class="separator" />
+              <div class="heading">付近の避難所</div>
+              <ol class="nearby-shelter">
+                <li
+                  v-for="nearbyShelter in nearbyShelters"
+                  :key="nearbyShelter.shelter.id"
+                  class="item"
+                >
+                  <button
+                    class="button"
+                    @click.stop="changeShelter(nearbyShelter.shelter.id)"
+                  >
+                    <span class="name">{{ nearbyShelter.shelter.name }}</span>
+                    <span class="distance">{{ Math.round(nearbyShelter.distance) }}m</span>
+                  </button>
+                </li>
+              </ol>
             </div>
           </transition>
         </template>
@@ -86,8 +78,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { defineComponent, computed, PropType } from 'vue';
 import { Shelter } from '../types';
+import { getDistanceFromLatLng } from '../utils/getDistanceFromLatLng';
+import { nonNullable } from '../utils/nonNullable';
 
 export default defineComponent({
   name: 'MapShelter',
@@ -101,6 +95,31 @@ export default defineComponent({
       default: null,
     }
   },
+  emits: {
+    changeShelter: (shelterId: number) => !Number.isNaN(shelterId),
+  },
+  setup(props, { emit }) {
+    const shelter = computed(() => props.shelters.find((shelter) => shelter.id === props.shelterId));
+    const nearbyShelters = computed(() => {
+      return props.shelters
+        .map((targetShelter) => shelter.value ? ({
+          distance: getDistanceFromLatLng([shelter.value.latitude, shelter.value.longitude], [targetShelter.latitude, targetShelter.longitude]),
+          shelter: targetShelter,
+        }) : null)
+        .filter(nonNullable)
+        .sort((a, b) => a.distance > b.distance ? 1 : -1)
+        .slice(1, 6);
+    });
+
+    const changeShelter = (shelterId: number) => {
+      emit('changeShelter', shelterId);
+    };
+
+    return {
+      nearbyShelters,
+      changeShelter,
+    };
+  }
 });
 </script>
 
@@ -108,23 +127,6 @@ export default defineComponent({
 @import 'resources';
 
 $breakpoint: 600px;
-
-@mixin separation {
-  & {
-    position: relative;
-  }
-
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: -16px;
-    display: block;
-    width: calc(100% + 16px);
-    height: 1px;
-    content: '';
-    background: #ccc;
-  }
-}
 
 .map-shelter-wrapper {
   position: absolute;
@@ -194,6 +196,22 @@ $breakpoint: 600px;
     }
   }
 
+  & > .shelter > .separator {
+    display: block;
+    width: calc(100% + 16px);
+    height: 1px;
+    margin: 16px 0 16px -16px;
+    content: '';
+    background: #ccc;
+  }
+
+  & > .shelter > .heading {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #595959;
+  }
+
   & > .shelter > .picture {
     width: calc(100% + 32px);
     height: 160px;
@@ -220,32 +238,9 @@ $breakpoint: 600px;
   }
 
   & > .shelter > .address {
-    @include separation;
-
-    padding-bottom: 16px;
-    margin-bottom: 16px;
     font-size: 12px;
     line-height: 1.8;
     color: #555;
-  }
-
-  & > .shelter > .categories {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  & > .shelter > .categories > .tag {
-    padding: 4px 12px;
-    margin: 0 8px 4px 0;
-    color: #aaa;
-    border: 2px solid #aaa;
-    border-radius: 8px;
-  }
-
-  & > .shelter > .categories > .tag.-active {
-    color: #fff;
-    background: #041122;
-    border-color: #041122;
   }
 }
 
@@ -308,6 +303,58 @@ $breakpoint: 600px;
   & > .close:hover::before,
   & > .close:hover::after {
     width: 32px;
+  }
+}
+
+.nearby-shelter {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+
+  & > .item:not(:first-child)::before {
+    display: block;
+    width: calc(100% - 32px);
+    height: 1px;
+    margin: 0 auto;
+    content: '';
+    background: #ccc;
+  }
+
+  & > .item > .button {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px 32px 16px 16px;
+    text-align: left;
+    background: transparent;
+    border: 0;
+  }
+
+  & > .item > .button::before {
+    $size: 10px;
+
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    content: '';
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    transform: rotate(45deg) translate(-$size / 1.41421356 / 2, -$size / 1.41421356 / 2);
+  }
+
+  & > .item > .button > .name {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  & > .item > .button > .distance {
+    display: block;
+    font-size: 12px;
+    color: #595959;
   }
 }
 

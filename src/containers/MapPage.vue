@@ -8,7 +8,7 @@
       :shelters="shelters"
       :shelterId="shelterId"
       :presentLocation="presentLocation"
-      @clickShelter="onClickShelter"
+      @clickShelter="changeShelter"
     />
     <MapNavbar
       class="navbar"
@@ -18,6 +18,7 @@
   <MapShelter
     :shelters="shelters"
     :shelterId="shelterId"
+    @changeShelter="changeShelter"
   />
   <transition name="fade">
     <MapLoading v-if="!isInitialized" />
@@ -116,7 +117,7 @@ export default defineComponent({
       );
     });
 
-    const onClickShelter = async (id: number): Promise<void> => {
+    const changeShelter = async (id: number): Promise<void> => {
       await router.push(url('MAP_SHELTER', { shelterId: id }));
     }
 
@@ -139,7 +140,7 @@ export default defineComponent({
       shelterId,
       shelter,
       presentLocation,
-      onClickShelter,
+      changeShelter,
       backToMap,
       openMenu,
       closeMenu,
