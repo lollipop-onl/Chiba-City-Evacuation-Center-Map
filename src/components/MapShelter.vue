@@ -32,7 +32,7 @@
                 ※建物を含まない
               </div>
               <div class="address">
-                〒{{ shelter.postalCode }} 千葉県{{ shelter.address }}
+                〒{{ shelter.postalCode }} {{ shelter.address }}
               </div>
               <div class="separator" />
               <div class="heading">避難所の情報</div>
@@ -50,10 +50,15 @@
                     @click.stop="changeShelter(nearbyShelter.shelter.id)"
                   >
                     <span class="main">{{ nearbyShelter.shelter.name }}</span>
-                    <span class="sub">{{ Math.round(nearbyShelter.distance) }}m</span>
+                    <span class="sub">{{ formatNumber(nearbyShelter.distance) }}m</span>
                   </button>
                 </li>
               </ol>
+              <template v-if="distanceFromPresentLocation != null">
+                <div class="separator" />
+                <div class="heading">現在地からの距離</div>
+                <div class="distance">{{ formatNumber(distanceFromPresentLocation) }}m</div>
+              </template>
               <div class="separator" />
               <div class="heading">Googleマップで開く</div>
               <a
@@ -97,21 +102,29 @@
 <script lang="ts">
 import { defineComponent, computed, ref, watch, PropType } from 'vue';
 import urlJoin from 'url-join';
-import { Shelter } from '../types';
+import { PresentLocation, Shelter } from '../types';
+import { formatNumber } from '../utils/formatNumber';
 import { getDistanceFromLatLng } from '../utils/getDistanceFromLatLng';
 import { nonNullable } from '../utils/nonNullable';
 
 export default defineComponent({
   name: 'MapShelter',
   props: {
+    /** 避難所情報 */
     shelters: {
       type: Array as PropType<Shelter[]>,
       required: true,
     },
+    /** 選択している避難所 */
     shelterId: {
       type: Number as PropType<number | null>,
       default: null,
-    }
+    },
+    /** ユーザーの現在位置 */
+    presentLocation: {
+      type: Object as PropType<PresentLocation | null>,
+      default: null,
+    },
   },
   emits: {
     changeShelter: (shelterId: number) => !Number.isNaN(shelterId),
@@ -122,13 +135,24 @@ export default defineComponent({
     const nearbyShelters = computed(() => {
       return props.shelters
         .map((targetShelter) => shelter.value ? ({
-          distance: getDistanceFromLatLng([shelter.value.latitude, shelter.value.longitude], [targetShelter.latitude, targetShelter.longitude]),
+          distance: getDistanceFromLatLng(
+            [shelter.value.latitude, shelter.value.longitude],
+            [targetShelter.latitude, targetShelter.longitude]
+          ),
           shelter: targetShelter,
         }) : null)
         .filter(nonNullable)
         .sort((a, b) => a.distance > b.distance ? 1 : -1)
         .slice(1, 6);
     });
+    const distanceFromPresentLocation = computed((): number | null =>
+      props.presentLocation && shelter.value
+        ? getDistanceFromLatLng(
+            [props.presentLocation.latitude, props.presentLocation.longitude],
+            [shelter.value.latitude, shelter.value.longitude]
+          )
+        : null
+    );
     const googleMapsUrl = computed((): string | null => shelter.value
       ? urlJoin('https://www.google.co.jp/maps', `@${shelter.value.latitude},${shelter.value.longitude},19z`)
       : null
@@ -149,8 +173,10 @@ export default defineComponent({
     return {
       shelterView,
       nearbyShelters,
+      distanceFromPresentLocation,
       googleMapsUrl,
       changeShelter,
+      formatNumber,
     };
   }
 });
@@ -318,6 +344,12 @@ $breakpoint: 600px;
     font-size: 12px;
     line-height: 1.8;
     color: #555;
+  }
+
+  & > .shelter > .distance {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #041122;
   }
 }
 

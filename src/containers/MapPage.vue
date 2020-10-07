@@ -18,6 +18,7 @@
   <MapShelter
     :shelters="shelters"
     :shelterId="shelterId"
+    :presentLocation="presentLocation"
     @changeShelter="changeShelter"
   />
   <transition name="fade">

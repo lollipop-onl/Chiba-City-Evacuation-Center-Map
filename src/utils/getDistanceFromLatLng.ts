@@ -11,5 +11,5 @@ export const getDistanceFromLatLng = (latlng1: [number, number], latlng2: [numbe
   const lat2 = latlng2[0] * Math.PI / 180;
   const lng2 = latlng2[1] * Math.PI / 180;
 
-  return RADIUS_OF_THE_EARTH * Math.acos(Math.cos(lat1) * Math.cos(lat2) * Math.cos(lng2 - lng1) + Math.sin(lat1) * Math.sin(lat2));
+  return Math.round(RADIUS_OF_THE_EARTH * Math.acos(Math.cos(lat1) * Math.cos(lat2) * Math.cos(lng2 - lng1) + Math.sin(lat1) * Math.sin(lat2)));
 };
