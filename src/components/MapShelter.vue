@@ -9,7 +9,7 @@
           v-for="shelter in shelters"
           :key="shelter.id"
         >
-          <transition name="list">
+          <transition name="fade">
             <div
               v-if="shelter.id === shelterId"
               class="shelter"
@@ -22,6 +22,12 @@
                 />
               </div>
               <div class="name">{{ shelter.name }}</div>
+              <div
+                v-if="shelter.isBuildingIgnored || true"
+                class="namenote"
+              >
+                ※建物を含まない
+              </div>
               <div class="address">
                 〒{{ shelter.postalCode }} 千葉県{{ shelter.address }}
               </div>
@@ -55,10 +61,25 @@
             </div>
           </transition>
         </template>
-        <RouterLink
-          class="close"
-          to="/map"
-        />
+        <div class="map-shelter-card-header">
+          <template
+            v-for="shelter in shelters"
+            :key="shelter.id"
+          >
+            <transition name="fade">
+              <div
+                v-if="shelter.id === shelterId"
+                class="title"
+              >
+                {{ shelter.name }}
+              </div>
+            </transition>
+          </template>
+          <RouterLink
+            class="close"
+            to="/map"
+          />
+        </div>
       </div>
     </div>
   </transition>
@@ -98,7 +119,7 @@ $breakpoint: 600px;
     bottom: 0;
     left: -16px;
     display: block;
-    width: calc(100% + 32px);
+    width: calc(100% + 16px);
     height: 1px;
     content: '';
     background: #ccc;
@@ -142,7 +163,7 @@ $breakpoint: 600px;
   width: 400px;
   height: calc(var(--vh, 1vh) * 100 - 64px);
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   background: #f5f5f5;
 
   @media (max-width: $breakpoint) {
@@ -150,10 +171,23 @@ $breakpoint: 600px;
     height: calc(var(--vh, 1vh) * 100 - 180px);
   }
 
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin-top: 64px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(#041122, 0.2);
+    border-radius: 2px;
+  }
+
   & > .shelter {
     box-sizing: border-box;
     width: 400px;
-    padding: 0 16px;
+    padding: 64px 16px 0 16px;
 
     @media (max-width: $breakpoint) {
       width: 100%;
@@ -162,7 +196,7 @@ $breakpoint: 600px;
 
   & > .shelter > .picture {
     width: calc(100% + 32px);
-    height: 240px;
+    height: 160px;
     margin: 0 0 32px -16px;
   }
 
@@ -176,6 +210,13 @@ $breakpoint: 600px;
     margin-bottom: 8px;
     font-size: 20px;
     line-height: 1.8;
+  }
+
+  & > .shelter > .namenote {
+    margin: -8px 0 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #041122;
   }
 
   & > .shelter > .address {
@@ -206,6 +247,30 @@ $breakpoint: 600px;
     background: #041122;
     border-color: #041122;
   }
+}
+
+.map-shelter-card-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: #f5f5f5;
+
+  & > .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 64px);
+    height: 64px;
+    padding-left: 16px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 64px;
+    color: #595959;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
   & > .close {
     position: absolute;
@@ -215,7 +280,7 @@ $breakpoint: 600px;
     place-items: center;
     width: 64px;
     height: 64px;
-    filter: drop-shadow(0 0 10px rgba(#252521, 0.8));
+    margin-left: auto;
   }
 
   & > .close::before,
@@ -226,7 +291,7 @@ $breakpoint: 600px;
     width: 24px;
     height: 2px;
     content: '';
-    background: #fff;
+    background: #595959;
     border-radius: 2px;
     transition: width 0.12s ease;
     transform: translate(-50%, -50%);
@@ -274,17 +339,17 @@ $breakpoint: 600px;
   }
 }
 
-.list-enter-active,
-.list-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.3s ease;
 }
 
-.list-enter-from,
-.list-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 
-.list-leave-active {
+.fade-leave-active {
   position: absolute;
   top: 0;
   left: 0;
