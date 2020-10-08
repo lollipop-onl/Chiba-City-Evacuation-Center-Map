@@ -184,7 +184,7 @@ export default defineComponent({
         category.evacuationArea && '指定緊急避難場所',
         category.shelter && '指定避難所',
         category.wideAreaShelter && '広域避難場所',
-        category.tsunamiRefugeBuilding && '地震避難ビル',
+        category.tsunamiRefugeBuilding && '津波避難ビル',
       ]
         .filter((category): category is string => typeof category === 'string')
         .join('・');
