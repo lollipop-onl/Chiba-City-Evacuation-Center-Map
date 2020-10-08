@@ -37,6 +37,41 @@
               <div class="separator" />
               <div class="heading">避難所の情報</div>
               <MapShelterSupport :shelter="shelter" />
+              <MapShelterCollapse
+                class="collapse"
+                label="アイコンについて"
+              >
+                <ul class="note-icon">
+                  <li class="item">
+                    <MapSupportIcon
+                      :support="0"
+                      class="icon"
+                    />
+                    <p class="note">避難不可</p>
+                  </li>
+                  <li class="item">
+                    <MapSupportIcon
+                      :support="1"
+                      class="icon"
+                    />
+                    <p class="note">避難可</p>
+                  </li>
+                  <li class="item">
+                    <MapSupportIcon
+                      :support="3"
+                      class="icon"
+                    />
+                    <p class="note">高潮・津波発生時、３階以上への避難で避難可</p>
+                  </li>
+                  <li class="item">
+                    <MapSupportIcon
+                      :support="4"
+                      class="icon"
+                    />
+                    <p class="note">当該災害による避難を想定しない</p>
+                  </li>
+                </ul>
+              </MapShelterCollapse>
               <pre>{{ shelter }}</pre>
               <div class="separator" />
               <div class="heading">付近の避難所</div>
@@ -104,6 +139,8 @@
 import { defineComponent, computed, ref, watch, PropType } from 'vue';
 import urlJoin from 'url-join';
 import MapShelterSupport from './MapShelterSupport.vue';
+import MapShelterCollapse from './MapShelterCollapse.vue';
+import MapSupportIcon from './MapSupportIcon.vue';
 import { PresentLocation, Shelter } from '../types';
 import { formatNumber } from '../utils/formatNumber';
 import { getDistanceFromLatLng } from '../utils/getDistanceFromLatLng';
@@ -113,6 +150,8 @@ export default defineComponent({
   name: 'MapShelter',
   components: {
     MapShelterSupport,
+    MapShelterCollapse,
+    MapSupportIcon,
   },
   props: {
     /** 避難所情報 */
@@ -357,6 +396,10 @@ $breakpoint: 600px;
     line-height: 1.5;
     color: #041122;
   }
+
+  & > .shelter > .collapse {
+    margin: 8px 0;
+  }
 }
 
 .map-shelter-card-header {
@@ -421,13 +464,27 @@ $breakpoint: 600px;
   }
 }
 
-.nearby-shelter {
-  & > .item:not(:first-child)::before {
-    display: block;
-    width: 100%;
-    height: 1px;
-    content: '';
-    background: #ccc;
+.note-icon {
+  & > .item {
+    display: flex;
+    margin-bottom: 4px;
+  }
+
+  & > .item > .icon {
+    flex-shrink: 0;
+  }
+
+  & > .item > .note {
+    margin-left: 2em;
+    font-size: 12px;
+    line-height: 18px;
+    color: #595959;
+    text-indent: -2em;
+  }
+
+  & > .item > .note::before {
+    padding: 0 0.5em;
+    content: '...';
   }
 }
 
