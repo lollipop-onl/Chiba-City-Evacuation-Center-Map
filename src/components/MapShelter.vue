@@ -233,6 +233,7 @@ $breakpoint: 600px;
     text-decoration: none;
     background: transparent;
     border: 0;
+    cursor: pointer;
   }
 
   &::before {
