@@ -1,11 +1,17 @@
 import { createApp } from 'vue';
-import gtag, { trackRouter } from 'vue-gtag-next';
+import firebase from 'firebase';
 import { debounce } from 'throttle-debounce';
 import App from './App.vue';
 import { route } from './router';
+import 'firebase/analytics';
 import 'reset-css';
 import './assets/styles/main.scss';
-import { getGtagOptions } from './utils/getGtagOptions';
+
+firebase.initializeApp({
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+});
+
+const analytics = firebase.analytics();
 
 const setBaseVh = debounce(100, (): void => {
   const vh = window.innerHeight * 0.01;
@@ -27,9 +33,18 @@ window.addEventListener('load', () => {
 
 const app = createApp(App);
 
-app.use(gtag, getGtagOptions());
-trackRouter(route);
-
 app.use(route);
-
 app.mount('#app');
+
+route.beforeEach((from, to, next) => {
+  if (from.path === to.path) {
+    return;
+  }
+
+  analytics.logEvent('screen_view', {
+    app_name: location.host,
+    screen_name: to.path,
+  });
+
+  next();
+});

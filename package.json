@@ -8,12 +8,12 @@
     "lint:css": "stylelint \"**/*.{vue,scss}\""
   },
   "dependencies": {
+    "firebase": "^7.22.1",
     "leaflet": "^1.7.1",
     "reset-css": "^5.0.1",
     "throttle-debounce": "^2.3.0",
     "url-join": "^4.0.1",
     "vue": "^3.0.0-rc.1",
-    "vue-gtag-next": "^1.13.0",
     "vue-router": "^4.0.0-beta.13"
   },
   "devDependencies": {
