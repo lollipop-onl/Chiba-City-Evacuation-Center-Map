@@ -1,6 +1,7 @@
 {
   "lang": "ja",
   "name": "千葉市避難所マップ",
+  "short_name": "千葉市避難所",
   "icons": [
     { "src": "https://chiba-shelter-map.lollipop.onl/icons/icon-72x72.png", "sizes": "72x72", "type": "image/png" },
     { "src": "https://chiba-shelter-map.lollipop.onl/icons/icon-96x96.png", "sizes": "96x96", "type": "image/png" },

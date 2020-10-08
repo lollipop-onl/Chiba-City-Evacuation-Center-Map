@@ -1,10 +1,11 @@
 import { createApp } from 'vue';
+import gtag, { trackRouter } from 'vue-gtag-next';
 import { debounce } from 'throttle-debounce';
 import App from './App.vue';
 import { route } from './router';
 import 'reset-css';
 import './assets/styles/main.scss';
-import { loadGoogleAnalyticsScript } from './utils/loadGoogleAnalytics';
+import { getGtagOptions } from './utils/getGtagOptions';
 
 const setBaseVh = debounce(100, (): void => {
   const vh = window.innerHeight * 0.01;
@@ -18,9 +19,6 @@ const setBaseVh = debounce(100, (): void => {
 window.addEventListener('resize', setBaseVh);
 setBaseVh();
 
-// @ts-expect-error
-loadGoogleAnalyticsScript(import.meta.env.VITE_GA_MEASUREMENT_ID);
-
 window.addEventListener('load', () => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
@@ -30,5 +28,10 @@ window.addEventListener('load', () => {
 const app = createApp(App)
 
 app.use(route);
+
+trackRouter(route);
+
+app.use(gtag, getGtagOptions());
+trackRouter(route);
 
 app.mount('#app');
