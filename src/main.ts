@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import { debounce } from 'throttle-debounce';
 import App from './App.vue';
 import { route } from './router';
@@ -8,8 +8,14 @@ import 'reset-css';
 import './assets/styles/main.scss';
 
 firebase.initializeApp({
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+  apiKey: 'AIzaSyDY_r9YTM7pk7Vo4lIKGS1hc5BamwGrH6g',
+  authDomain: 'chiba-shelter-map.firebaseapp.com',
+  databaseURL: 'https://chiba-shelter-map.firebaseio.com',
+  projectId: 'chiba-shelter-map',
+  storageBucket: 'chiba-shelter-map.appspot.com',
+  messagingSenderId: '1015192757918',
+  appId: '1:1015192757918:web:f82d0962c418770b1c7d8f',
+  measurementId: 'G-737K8N5Q2X',
 });
 
 const analytics = firebase.analytics();
@@ -45,6 +51,7 @@ route.beforeEach((from, to, next) => {
   analytics.logEvent('screen_view', {
     app_name: location.host,
     screen_name: to.path,
+    environment: import.meta.env.MODE,
   });
 
   next();
