@@ -44,8 +44,6 @@
                 :shelter="shelter"
               />
               <MapSupportIconNote class="collapse" />
-              <div class="separator -thin" />
-              <pre>{{ shelter }}</pre>
               <div class="separator" />
               <div class="heading">付近の避難所</div>
               <ol class="nearby-shelter">
