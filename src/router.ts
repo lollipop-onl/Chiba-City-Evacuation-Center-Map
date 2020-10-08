@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import { PAGES } from './const';
-import LandingPage from './containers/LandingPage.vue';
-import MapPage from './containers/MapPage.vue';
 
 export const routerHistory = createWebHistory();
 
@@ -10,19 +8,19 @@ export const route = createRouter({
   routes: [
     {
       path: PAGES.LANDING_PAGE,
-      component: LandingPage
+      component: () => import('./containers/LandingPage.vue'),
     },
     {
       path: PAGES.MAP,
-      component: MapPage,
+      component: () => import('./containers/MapPage.vue'),
     },
     {
       path: PAGES.MAP_MENU,
-      component: MapPage,
+      component: () => import('./containers/MapPage.vue'),
     },
     {
       path: PAGES.MAP_SHELTER,
-      component: MapPage,
+      component: () => import('./containers/MapPage.vue'),
     },
   ],
 });

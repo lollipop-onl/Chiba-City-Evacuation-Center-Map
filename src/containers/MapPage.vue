@@ -59,6 +59,7 @@ import { url } from '../utils/url';
 import { checkCoordinateAvailability } from '../utils/checkCoordinateAvailability';
 
 export default defineComponent({
+  name: 'MapPage',
   components: {
     MapView,
     MapNavbar,
