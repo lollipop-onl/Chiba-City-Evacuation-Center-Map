@@ -19,12 +19,12 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
+      - name: Firebase CLIのインストール
+        run: yarn global add firebase-tools
       - name: 依存関係のインストール
         run: yarn install --frozen-lockfile
       - name: アプリケーションのビルド
         run: yarn build
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          cname: chiba-shelter-map.lollipop.onl
+      - name: Firebase Hostingへデプロイ
+        run: |
+          firebase deploy --token $FIREBASE_TOKEN
