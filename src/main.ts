@@ -25,13 +25,11 @@ window.addEventListener('load', () => {
   }
 });
 
-const app = createApp(App)
-
-app.use(route);
-
-trackRouter(route);
+const app = createApp(App);
 
 app.use(gtag, getGtagOptions());
 trackRouter(route);
+
+app.use(route);
 
 app.mount('#app');
