@@ -511,7 +511,7 @@ $breakpoint: 600px;
 .note-icon {
   & > .item {
     display: flex;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
   & > .item > .icon {
@@ -520,7 +520,6 @@ $breakpoint: 600px;
 
   & > .item > .note {
     margin-left: 2em;
-    font-size: 12px;
     line-height: 18px;
     color: #595959;
     text-indent: -2em;
