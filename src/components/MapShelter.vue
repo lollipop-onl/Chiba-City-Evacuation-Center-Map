@@ -110,10 +110,8 @@
 import { defineComponent, computed, ref, watch, PropType } from 'vue';
 import urlJoin from 'url-join';
 import MapShelterSupport from './MapShelterSupport.vue';
-import MapShelterCollapse from './MapShelterCollapse.vue';
 import MapShelterCategoryNote from './MapShelterCategoryNote.vue';
 import MapSupportIconNote from './MapSupportIconNote.vue';
-import MapSupportIcon from './MapSupportIcon.vue';
 import { PresentLocation, Shelter } from '../types';
 import { formatNumber } from '../utils/formatNumber';
 import { getDistanceFromLatLng } from '../utils/getDistanceFromLatLng';
