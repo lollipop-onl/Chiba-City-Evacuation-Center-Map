@@ -25,6 +25,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: アプリケーションのビルド
         run: yarn build
+        env:
+          VITE_GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
       - name: Firebase Hostingへデプロイ
         run: firebase deploy --token $FIREBASE_TOKEN
         env:
