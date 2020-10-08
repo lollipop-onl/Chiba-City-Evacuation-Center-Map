@@ -231,9 +231,9 @@ $breakpoint: 600px;
     color: #252521;
     text-align: left;
     text-decoration: none;
+    cursor: pointer;
     background: transparent;
     border: 0;
-    cursor: pointer;
   }
 
   &::before {
