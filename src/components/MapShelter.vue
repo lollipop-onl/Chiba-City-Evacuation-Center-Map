@@ -36,6 +36,7 @@
               </div>
               <div class="separator" />
               <div class="heading">避難所の情報</div>
+              <MapShelterSupport :shelter="shelter" />
               <pre>{{ shelter }}</pre>
               <div class="separator" />
               <div class="heading">付近の避難所</div>
@@ -102,6 +103,7 @@
 <script lang="ts">
 import { defineComponent, computed, ref, watch, PropType } from 'vue';
 import urlJoin from 'url-join';
+import MapShelterSupport from './MapShelterSupport.vue';
 import { PresentLocation, Shelter } from '../types';
 import { formatNumber } from '../utils/formatNumber';
 import { getDistanceFromLatLng } from '../utils/getDistanceFromLatLng';
@@ -109,6 +111,9 @@ import { nonNullable } from '../utils/nonNullable';
 
 export default defineComponent({
   name: 'MapShelter',
+  components: {
+    MapShelterSupport,
+  },
   props: {
     /** 避難所情報 */
     shelters: {
