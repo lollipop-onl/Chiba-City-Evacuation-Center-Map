@@ -37,73 +37,13 @@
               <div class="separator" />
               <div class="heading">施設の情報</div>
               <p class="categories">{{ categories }}</p>
-              <MapShelterCollapse
-                class="collapse"
-                label="施設のカテゴリについて"
-              >
-                <ul class="note-category">
-                  <li class="item">
-                    <p class="note">
-                      <span class="title">指定緊急避難場所</span>：公園、学校の屋内運動場または校庭等、一時的に身の安全が確保できる施設又は場所
-                    </p>
-                  </li>
-                  <li class="item">
-                    <p class="note">
-                      <span class="title">指定避難所</span>：被災者の住宅に危険が予想される場合や住宅が損壊した場合等、生活の場が失われた場合に、一時的な生活の本拠地として宿泊滞在するための施設
-                    </p>
-                  </li>
-                  <li class="item">
-                    <p class="note">
-                      <span class="title">広域避難場所</span>：大規模な火災が発生したとき、輻射熱や煙などから身を守り、安全を確保する場所で相当程度のオープンスペースが確保された公園等の施設
-                    </p>
-                  </li>
-                  <li class="item">
-                    <p class="note">
-                      <span class="title">津波避難ビル</span>：津波災害発生時、高台への避難が間に合わない場合に緊急的に一時避難する施設
-                    </p>
-                  </li>
-                </ul>
-              </MapShelterCollapse>
+              <MapShelterCategoryNote class="collapse" />
               <div class="separator -thin" />
               <MapShelterSupport
                 class="support"
                 :shelter="shelter"
               />
-              <MapShelterCollapse
-                class="collapse"
-                label="アイコンについて"
-              >
-                <ul class="note-icon">
-                  <li class="item">
-                    <MapSupportIcon
-                      :support="0"
-                      class="icon"
-                    />
-                    <p class="note">避難不可</p>
-                  </li>
-                  <li class="item">
-                    <MapSupportIcon
-                      :support="1"
-                      class="icon"
-                    />
-                    <p class="note">避難可</p>
-                  </li>
-                  <li class="item">
-                    <MapSupportIcon
-                      :support="3"
-                      class="icon"
-                    />
-                    <p class="note">高潮・津波発生時、３階以上への避難で避難可</p>
-                  </li>
-                  <li class="item">
-                    <MapSupportIcon
-                      :support="4"
-                      class="icon"
-                    />
-                    <p class="note">当該災害による避難を想定しない</p>
-                  </li>
-                </ul>
-              </MapShelterCollapse>
+              <MapSupportIconNote class="collapse" />
               <div class="separator -thin" />
               <pre>{{ shelter }}</pre>
               <div class="separator" />
@@ -173,6 +113,8 @@ import { defineComponent, computed, ref, watch, PropType } from 'vue';
 import urlJoin from 'url-join';
 import MapShelterSupport from './MapShelterSupport.vue';
 import MapShelterCollapse from './MapShelterCollapse.vue';
+import MapShelterCategoryNote from './MapShelterCategoryNote.vue';
+import MapSupportIconNote from './MapSupportIconNote.vue';
 import MapSupportIcon from './MapSupportIcon.vue';
 import { PresentLocation, Shelter } from '../types';
 import { formatNumber } from '../utils/formatNumber';
@@ -183,8 +125,8 @@ export default defineComponent({
   name: 'MapShelter',
   components: {
     MapShelterSupport,
-    MapShelterCollapse,
-    MapSupportIcon,
+    MapShelterCategoryNote,
+    MapSupportIconNote,
   },
   props: {
     /** 避難所情報 */
@@ -526,39 +468,6 @@ $breakpoint: 600px;
   & > .close:hover::before,
   & > .close:hover::after {
     width: 32px;
-  }
-}
-
-.note-icon {
-  & > .item {
-    display: flex;
-    margin-bottom: 4px;
-  }
-
-  & > .item > .icon {
-    flex-shrink: 0;
-  }
-
-  & > .item > .note {
-    margin-left: 2em;
-    line-height: 18px;
-    color: #595959;
-    text-indent: -2em;
-  }
-
-  & > .item > .note::before {
-    padding: 0 0.5em;
-    content: '...';
-  }
-}
-
-.note-category {
-  & > .item:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-  & > .item > .note > .title {
-    font-weight: bold;
   }
 }
 
