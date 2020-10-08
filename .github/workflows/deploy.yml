@@ -20,7 +20,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Firebase CLIのインストール
-        run: yarn global add firebase-tools
+        run: npm install -g firebase-tools
       - name: 依存関係のインストール
         run: yarn install --frozen-lockfile
       - name: アプリケーションのビルド
