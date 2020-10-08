@@ -533,7 +533,7 @@ $breakpoint: 600px;
 }
 
 .nearby-shelter {
-  & > .item {
+  & > .item:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
 }
