@@ -8,6 +8,7 @@ import 'reset-css';
 import './assets/styles/main.scss';
 
 firebase.initializeApp({
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 });
 
