@@ -6,6 +6,8 @@ import { Options } from 'vue-gtag-next';
 export const getGtagOptions = (): Options => {
   const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
 
+  console.log(measurementId);
+
   if (typeof measurementId !== 'string') {
     return {
       isEnabled: false,
