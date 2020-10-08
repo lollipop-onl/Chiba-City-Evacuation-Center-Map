@@ -24,7 +24,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 4790,
@@ -54,7 +54,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 4070,
@@ -84,7 +84,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 160,
@@ -114,7 +114,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4470,
@@ -144,7 +144,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 3070,
@@ -174,7 +174,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3510,
@@ -204,7 +204,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 5250,
@@ -234,7 +234,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 5020,
@@ -264,7 +264,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5350,
@@ -294,7 +294,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5350,
@@ -324,7 +324,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5230,
@@ -354,7 +354,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5070,
@@ -384,7 +384,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 5340,
@@ -414,7 +414,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 12230,
@@ -444,7 +444,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3180,
@@ -474,7 +474,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4000,
@@ -504,7 +504,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5880,
@@ -534,7 +534,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6610,
@@ -564,7 +564,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 11190,
@@ -594,7 +594,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 320,
@@ -624,7 +624,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 2210,
@@ -654,7 +654,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 160,
@@ -684,7 +684,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 600,
@@ -714,7 +714,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4330,
@@ -744,7 +744,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5510,
@@ -774,7 +774,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4020,
@@ -804,7 +804,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 460,
@@ -834,7 +834,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3900,
@@ -864,7 +864,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6300,
@@ -894,7 +894,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3920,
@@ -924,7 +924,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5930,
@@ -954,7 +954,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1630,
@@ -984,7 +984,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3990,
@@ -1014,7 +1014,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 450,
@@ -1044,7 +1044,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3760,
@@ -1074,7 +1074,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5030,
@@ -1104,7 +1104,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4650,
@@ -1134,7 +1134,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 8210,
@@ -1164,7 +1164,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5120,
@@ -1194,7 +1194,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 8280,
@@ -1224,7 +1224,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 2470,
@@ -1254,7 +1254,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 12640,
@@ -1284,7 +1284,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 480,
@@ -1314,7 +1314,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 160,
@@ -1344,7 +1344,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 160,
@@ -1374,7 +1374,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 300,
@@ -1404,7 +1404,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 160,
@@ -1434,7 +1434,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -1464,7 +1464,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -1494,7 +1494,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 2390,
@@ -1524,7 +1524,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1780,
@@ -1554,7 +1554,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -1584,7 +1584,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 680,
@@ -1614,7 +1614,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 190,
@@ -1644,7 +1644,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 190,
@@ -1674,7 +1674,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3210,
@@ -1704,7 +1704,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3360,
@@ -1734,7 +1734,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 350,
@@ -1764,7 +1764,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 10290,
@@ -1794,7 +1794,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4070,
@@ -1824,7 +1824,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -1854,7 +1854,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -1884,7 +1884,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -1914,7 +1914,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -1944,7 +1944,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -1974,7 +1974,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -2004,7 +2004,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4140,
@@ -2034,7 +2034,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 230,
@@ -2064,7 +2064,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3900,
@@ -2094,7 +2094,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 4270,
@@ -2124,7 +2124,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1240,
@@ -2154,7 +2154,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6180,
@@ -2184,7 +2184,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 3650,
@@ -2214,7 +2214,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5560,
@@ -2244,7 +2244,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3880,
@@ -2274,7 +2274,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3990,
@@ -2304,7 +2304,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 3470,
@@ -2334,7 +2334,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4870,
@@ -2364,7 +2364,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4050,
@@ -2394,7 +2394,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5280,
@@ -2424,7 +2424,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3740,
@@ -2454,7 +2454,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3970,
@@ -2484,7 +2484,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3870,
@@ -2514,7 +2514,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5930,
@@ -2544,7 +2544,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3810,
@@ -2574,7 +2574,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5040,
@@ -2604,7 +2604,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5810,
@@ -2634,7 +2634,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4710,
@@ -2664,7 +2664,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 8450,
@@ -2694,7 +2694,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5020,
@@ -2724,7 +2724,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6820,
@@ -2754,7 +2754,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 290,
@@ -2784,7 +2784,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5620,
@@ -2814,7 +2814,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5700,
@@ -2844,7 +2844,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 210,
@@ -2874,7 +2874,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6190,
@@ -2904,7 +2904,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5740,
@@ -2934,7 +2934,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 480,
@@ -2964,7 +2964,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 360,
@@ -2994,7 +2994,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 990,
@@ -3024,7 +3024,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5260,
@@ -3054,7 +3054,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4500,
@@ -3084,7 +3084,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 210,
@@ -3114,7 +3114,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 200,
@@ -3144,7 +3144,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5850,
@@ -3174,7 +3174,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 80,
@@ -3204,7 +3204,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5760,
@@ -3234,7 +3234,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 8460,
@@ -3264,7 +3264,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 10500,
@@ -3294,7 +3294,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3720,
@@ -3324,7 +3324,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 2820,
@@ -3354,7 +3354,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4770,
@@ -3384,7 +3384,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 530,
@@ -3414,7 +3414,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 41070,
@@ -3444,7 +3444,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4100,
@@ -3474,7 +3474,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5460,
@@ -3504,7 +3504,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 2830,
@@ -3534,7 +3534,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 7060,
@@ -3564,7 +3564,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 11200,
@@ -3594,7 +3594,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4940,
@@ -3624,7 +3624,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4400,
@@ -3654,7 +3654,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4960,
@@ -3684,7 +3684,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 9040,
@@ -3714,7 +3714,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 240,
@@ -3744,7 +3744,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5870,
@@ -3774,7 +3774,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4320,
@@ -3804,7 +3804,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3460,
@@ -3834,7 +3834,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4130,
@@ -3864,7 +3864,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4870,
@@ -3894,7 +3894,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4630,
@@ -3924,7 +3924,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4290,
@@ -3954,7 +3954,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -3984,7 +3984,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 200,
@@ -4014,7 +4014,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3270,
@@ -4044,7 +4044,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -4074,7 +4074,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -4104,7 +4104,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -4134,7 +4134,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4600,
@@ -4164,7 +4164,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5790,
@@ -4194,7 +4194,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 300,
@@ -4224,7 +4224,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1060,
@@ -4254,7 +4254,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5510,
@@ -4284,7 +4284,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4690,
@@ -4314,7 +4314,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 2850,
@@ -4344,7 +4344,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4500,
@@ -4374,7 +4374,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4950,
@@ -4404,7 +4404,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6000,
@@ -4434,7 +4434,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5580,
@@ -4464,7 +4464,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 300,
@@ -4494,7 +4494,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 8480,
@@ -4524,7 +4524,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 200,
@@ -4554,7 +4554,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 210,
@@ -4584,7 +4584,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5420,
@@ -4614,7 +4614,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5600,
@@ -4644,7 +4644,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 220,
@@ -4674,7 +4674,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3020,
@@ -4704,7 +4704,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 13980,
@@ -4734,7 +4734,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 7220,
@@ -4764,7 +4764,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 7950,
@@ -4794,7 +4794,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 10110,
@@ -4824,7 +4824,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 9150,
@@ -4854,7 +4854,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 370,
@@ -4884,7 +4884,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4070,
@@ -4914,7 +4914,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4560,
@@ -4944,7 +4944,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3660,
@@ -4974,7 +4974,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4350,
@@ -5004,7 +5004,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5340,
@@ -5034,7 +5034,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 210,
@@ -5064,7 +5064,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 9660,
@@ -5094,7 +5094,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 200,
@@ -5124,7 +5124,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 200,
@@ -5154,7 +5154,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 690,
@@ -5184,7 +5184,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3800,
@@ -5214,7 +5214,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1060,
@@ -5244,7 +5244,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 430,
@@ -5274,7 +5274,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3840,
@@ -5304,7 +5304,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5540,
@@ -5334,7 +5334,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -5364,7 +5364,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -5394,7 +5394,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -5424,7 +5424,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 430,
@@ -5454,7 +5454,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 7360,
@@ -5484,7 +5484,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5540,
@@ -5514,7 +5514,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4440,
@@ -5544,7 +5544,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4080,
@@ -5574,7 +5574,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4880,
@@ -5604,7 +5604,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 2710,
@@ -5634,7 +5634,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1010,
@@ -5664,7 +5664,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4150,
@@ -5694,7 +5694,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3550,
@@ -5724,7 +5724,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5600,
@@ -5754,7 +5754,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 250,
@@ -5784,7 +5784,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6090,
@@ -5814,7 +5814,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5530,
@@ -5844,7 +5844,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5390,
@@ -5874,7 +5874,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6070,
@@ -5904,7 +5904,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6360,
@@ -5934,7 +5934,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4790,
@@ -5964,7 +5964,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4280,
@@ -5994,7 +5994,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5020,
@@ -6024,7 +6024,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 8530,
@@ -6054,7 +6054,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 10940,
@@ -6084,7 +6084,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 9950,
@@ -6114,7 +6114,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 160,
@@ -6144,7 +6144,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 200,
@@ -6174,7 +6174,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 410,
@@ -6204,7 +6204,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 310,
@@ -6234,7 +6234,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1000,
@@ -6264,7 +6264,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 200,
@@ -6294,7 +6294,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 290,
@@ -6324,7 +6324,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5600,
@@ -6354,7 +6354,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4570,
@@ -6384,7 +6384,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3970,
@@ -6414,7 +6414,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4840,
@@ -6444,7 +6444,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6770,
@@ -6474,7 +6474,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5600,
@@ -6504,7 +6504,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1080,
@@ -6534,7 +6534,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 240,
@@ -6564,7 +6564,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 460,
@@ -6594,7 +6594,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 16690,
@@ -6624,7 +6624,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3870,
@@ -6654,7 +6654,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4980,
@@ -6684,7 +6684,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 10610,
@@ -6714,7 +6714,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3700,
@@ -6744,7 +6744,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 7520,
@@ -6774,7 +6774,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6000,
@@ -6804,7 +6804,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5940,
@@ -6834,7 +6834,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4890,
@@ -6864,7 +6864,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 200,
@@ -6894,7 +6894,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 300,
@@ -6924,7 +6924,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 2030,
@@ -6954,7 +6954,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6070,
@@ -6984,7 +6984,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3000,
@@ -7014,7 +7014,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6140,
@@ -7044,7 +7044,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3620,
@@ -7074,7 +7074,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4590,
@@ -7104,7 +7104,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3480,
@@ -7134,7 +7134,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6570,
@@ -7164,7 +7164,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3170,
@@ -7194,7 +7194,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3920,
@@ -7224,7 +7224,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6110,
@@ -7254,7 +7254,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 10500,
@@ -7284,7 +7284,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 8310,
@@ -7314,7 +7314,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -7344,7 +7344,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -7374,7 +7374,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -7404,7 +7404,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -7434,7 +7434,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -7464,7 +7464,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -7494,7 +7494,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4600,
@@ -7524,7 +7524,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3800,
@@ -7554,7 +7554,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4420,
@@ -7584,7 +7584,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3730,
@@ -7614,7 +7614,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4480,
@@ -7644,7 +7644,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4540,
@@ -7674,7 +7674,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5400,
@@ -7704,7 +7704,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6110,
@@ -7734,7 +7734,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4820,
@@ -7764,7 +7764,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 8310,
@@ -7794,7 +7794,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4070,
@@ -7824,7 +7824,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3510,
@@ -7854,7 +7854,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4350,
@@ -7884,7 +7884,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5140,
@@ -7914,7 +7914,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4730,
@@ -7944,7 +7944,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4980,
@@ -7974,7 +7974,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5240,
@@ -8004,7 +8004,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 8200,
@@ -8034,7 +8034,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5380,
@@ -8064,7 +8064,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5830,
@@ -8094,7 +8094,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6470,
@@ -8124,7 +8124,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 7510,
@@ -8154,7 +8154,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 6810,
@@ -8184,7 +8184,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 14290,
@@ -8214,7 +8214,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 160,
@@ -8244,7 +8244,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1090,
@@ -8274,7 +8274,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5620,
@@ -8304,7 +8304,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3000,
@@ -8334,7 +8334,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 60,
@@ -8364,7 +8364,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 920,
@@ -8394,7 +8394,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 680,
@@ -8424,7 +8424,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 18530,
@@ -8454,7 +8454,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 200,
@@ -8484,7 +8484,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 250,
@@ -8514,7 +8514,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1830,
@@ -8544,7 +8544,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3710,
@@ -8574,7 +8574,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3900,
@@ -8604,7 +8604,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4890,
@@ -8634,7 +8634,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -8664,7 +8664,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -8694,7 +8694,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -8724,7 +8724,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -8754,7 +8754,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -8784,7 +8784,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -8814,7 +8814,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -8844,7 +8844,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 4580,
@@ -8874,7 +8874,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 5000,
@@ -8904,7 +8904,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 3490,
@@ -8934,7 +8934,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 10270,
@@ -8964,7 +8964,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 5560,
@@ -8994,7 +8994,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 3980,
@@ -9024,7 +9024,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 4830,
@@ -9054,7 +9054,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 5140,
@@ -9084,7 +9084,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 3150,
@@ -9114,7 +9114,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 3630,
@@ -9144,7 +9144,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3790,
@@ -9174,7 +9174,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4340,
@@ -9204,7 +9204,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4120,
@@ -9234,7 +9234,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 4340,
@@ -9264,7 +9264,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 4840,
@@ -9294,7 +9294,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 8320,
@@ -9324,7 +9324,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 5170,
@@ -9354,7 +9354,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 3900,
@@ -9384,7 +9384,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 4330,
@@ -9414,7 +9414,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 4400,
@@ -9444,7 +9444,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 3570,
@@ -9474,7 +9474,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 4420,
@@ -9504,7 +9504,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 5900,
@@ -9534,7 +9534,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 6580,
@@ -9564,7 +9564,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 6960,
@@ -9594,7 +9594,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 11220,
@@ -9624,7 +9624,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 8770,
@@ -9654,7 +9654,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 14380,
@@ -9684,7 +9684,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 6440,
@@ -9714,7 +9714,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 5380,
@@ -9744,7 +9744,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 12400,
@@ -9774,7 +9774,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4770,
@@ -9804,7 +9804,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 200,
@@ -9834,7 +9834,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 6710,
@@ -9864,7 +9864,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 13050,
@@ -9894,7 +9894,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 24960,
@@ -9924,7 +9924,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1140,
@@ -9954,7 +9954,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1420,
@@ -9984,7 +9984,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 210,
@@ -10014,7 +10014,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3890,
@@ -10044,7 +10044,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1380,
@@ -10074,7 +10074,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10104,7 +10104,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10134,7 +10134,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 470,
@@ -10164,7 +10164,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 230,
@@ -10194,7 +10194,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 420,
@@ -10224,7 +10224,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 310,
@@ -10254,7 +10254,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5030,
@@ -10284,7 +10284,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3900,
@@ -10314,7 +10314,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 1780,
@@ -10344,7 +10344,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3260,
@@ -10374,7 +10374,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3000,
@@ -10404,7 +10404,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 2030,
@@ -10434,7 +10434,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3890,
@@ -10464,7 +10464,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 320,
@@ -10494,7 +10494,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3750,
@@ -10524,7 +10524,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 5720,
@@ -10554,7 +10554,7 @@
         "evacuationArea": true,
         "shelter": true,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": 6420,
@@ -10584,7 +10584,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3590,
@@ -10614,7 +10614,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4800,
@@ -10644,7 +10644,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 4870,
@@ -10674,7 +10674,7 @@
         "evacuationArea": true,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": 3900,
@@ -10704,7 +10704,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": false,
-        "earthquakeRefugeBuilding": true
+        "tsunamiRefugeBuilding": true
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10734,7 +10734,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10764,7 +10764,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10794,7 +10794,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10824,7 +10824,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10854,7 +10854,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10884,7 +10884,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10914,7 +10914,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10944,7 +10944,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,
@@ -10974,7 +10974,7 @@
         "evacuationArea": false,
         "shelter": false,
         "wideAreaShelter": true,
-        "earthquakeRefugeBuilding": false
+        "tsunamiRefugeBuilding": false
       },
       "capacity": {
         "specifiedEmergencyShelter": -1,

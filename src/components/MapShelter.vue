@@ -35,8 +35,19 @@
                 〒{{ shelter.postalCode }} {{ shelter.address }}
               </div>
               <div class="separator" />
-              <div class="heading">避難所の情報</div>
-              <MapShelterSupport :shelter="shelter" />
+              <div class="heading">施設の情報</div>
+              <p class="categories">{{ categories }}</p>
+              <MapShelterCollapse
+                class="collapse"
+                label="施設のカテゴリについて"
+              >
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi eius asperiores optio ullam dolorum laboriosam nam harum. Iusto sequi aliquid nostrum odit laboriosam reiciendis voluptate quaerat veritatis eveniet, voluptas velit.</p>
+              </MapShelterCollapse>
+              <div class="separator -thin" />
+              <MapShelterSupport
+                class="support"
+                :shelter="shelter"
+              />
               <MapShelterCollapse
                 class="collapse"
                 label="アイコンについて"
@@ -72,6 +83,7 @@
                   </li>
                 </ul>
               </MapShelterCollapse>
+              <div class="separator -thin" />
               <pre>{{ shelter }}</pre>
               <div class="separator" />
               <div class="heading">付近の避難所</div>
@@ -82,7 +94,7 @@
                   class="item"
                 >
                   <button
-                    class="clickable-section"
+                    class="section clickable-section"
                     @click.stop="changeShelter(nearbyShelter.shelter.id)"
                   >
                     <span class="main">{{ nearbyShelter.shelter.name }}</span>
@@ -202,6 +214,22 @@ export default defineComponent({
       ? urlJoin('https://www.google.co.jp/maps', `@${shelter.value.latitude},${shelter.value.longitude},19z`)
       : null
     );
+    const categories = computed((): string => {
+      if (!shelter.value) {
+        return '';
+      }
+
+      const { category } = shelter.value;
+
+      return [
+        category.evacuationArea && '指定緊急避難場所',
+        category.shelter && '指定避難所',
+        category.wideAreaShelter && '広域避難場所' &&
+        category.tsunamiRefugeBuilding && '地震避難ビル',
+      ]
+        .filter((category): category is string => typeof category === 'string')
+        .join('・');
+    });
 
     const changeShelter = (shelterId: number) => {
       emit('changeShelter', shelterId);
@@ -220,6 +248,7 @@ export default defineComponent({
       nearbyShelters,
       distanceFromPresentLocation,
       googleMapsUrl,
+      categories,
       changeShelter,
       formatNumber,
     };
@@ -353,6 +382,11 @@ $breakpoint: 600px;
     background: #ccc;
   }
 
+  & > .shelter > .separator.-thin {
+    width: 100%;
+    margin: 8px 0;
+  }
+
   & > .shelter > .heading {
     margin-bottom: 8px;
     font-size: 14px;
@@ -399,6 +433,16 @@ $breakpoint: 600px;
 
   & > .shelter > .collapse {
     margin: 8px 0;
+  }
+
+  & > .shelter > .support {
+    margin-top: 8px;
+  }
+
+  & > .shelter > .categories {
+    margin: 16px 0 8px;
+    font-size: 16px;
+    color: #252521;
   }
 }
 
@@ -485,6 +529,12 @@ $breakpoint: 600px;
   & > .item > .note::before {
     padding: 0 0.5em;
     content: '...';
+  }
+}
+
+.nearby-shelter {
+  & > .item {
+    border-bottom: 1px solid #ccc;
   }
 }
 
