@@ -7,7 +7,10 @@
     >
       {{ label }}<span class="icon" />
     </button>
-    <div class="main" v-show="isOpen">
+    <div
+      v-show="isOpen"
+      class="main"
+    >
       <slot />
     </div>
   </div>
