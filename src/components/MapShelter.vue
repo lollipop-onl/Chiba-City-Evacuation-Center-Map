@@ -41,7 +41,28 @@
                 class="collapse"
                 label="施設のカテゴリについて"
               >
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi eius asperiores optio ullam dolorum laboriosam nam harum. Iusto sequi aliquid nostrum odit laboriosam reiciendis voluptate quaerat veritatis eveniet, voluptas velit.</p>
+                <ul class="note-category">
+                  <li class="item">
+                    <p class="note">
+                      <span class="title">指定緊急避難場所</span>：公園、学校の屋内運動場または校庭等、一時的に身の安全が確保できる施設又は場所
+                    </p>
+                  </li>
+                  <li class="item">
+                    <p class="note">
+                      <span class="title">指定避難所</span>：被災者の住宅に危険が予想される場合や住宅が損壊した場合等、生活の場が失われた場合に、一時的な生活の本拠地として宿泊滞在するための施設
+                    </p>
+                  </li>
+                  <li class="item">
+                    <p class="note">
+                      <span class="title">広域避難場所</span>：大規模な火災が発生したとき、輻射熱や煙などから身を守り、安全を確保する場所で相当程度のオープンスペースが確保された公園等の施設
+                    </p>
+                  </li>
+                  <li class="item">
+                    <p class="note">
+                      <span class="title">津波避難ビル</span>：津波災害発生時、高台への避難が間に合わない場合に緊急的に一時避難する施設
+                    </p>
+                  </li>
+                </ul>
               </MapShelterCollapse>
               <div class="separator -thin" />
               <MapShelterSupport
@@ -511,7 +532,7 @@ $breakpoint: 600px;
 .note-icon {
   & > .item {
     display: flex;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
 
   & > .item > .icon {
@@ -528,6 +549,16 @@ $breakpoint: 600px;
   & > .item > .note::before {
     padding: 0 0.5em;
     content: '...';
+  }
+}
+
+.note-category {
+  & > .item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  & > .item > .note > .title {
+    font-weight: bold;
   }
 }
 
