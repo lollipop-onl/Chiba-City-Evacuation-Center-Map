@@ -50,7 +50,7 @@ export default defineComponent({
     padding: 0;
     font-size: 14px;
     line-height: 1.8;
-    color: #11766D;
+    color: #11766d;
     text-decoration: underline;
     cursor: pointer;
     background: transparent;
@@ -79,8 +79,8 @@ export default defineComponent({
     width: 8px;
     height: 8px;
     content: '';
-    border-right: 2px solid #11766D;
-    border-bottom: 2px solid #11766D;
+    border-right: 2px solid #11766d;
+    border-bottom: 2px solid #11766d;
     transform: rotate(-45deg) translate(0, -6px);
   }
 
