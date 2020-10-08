@@ -86,6 +86,10 @@ export default defineComponent({
 
       shelters.value = data.shelters;
 
+      const timerId = setTimeout(() => {
+        isInitialized.value = true;
+      }, 5000);
+
       navigator.geolocation.watchPosition(
         (result) => {
           const { accuracy, latitude, longitude, heading } = result.coords;
@@ -105,12 +109,16 @@ export default defineComponent({
           };
 
           isInitialized.value = true;
+
+          clearTimeout(timerId);
         }, (error) => {
           console.error(error);
 
           presentLocation.value = null;
 
           isInitialized.value = true;
+
+          clearTimeout(timerId);
         },
         {
           enableHighAccuracy: true,
