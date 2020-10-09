@@ -3,7 +3,7 @@ import { PAGES } from './const';
 
 export const routerHistory = createWebHistory();
 
-export const route = createRouter({
+export const router = createRouter({
   history: routerHistory,
   routes: [
     {
