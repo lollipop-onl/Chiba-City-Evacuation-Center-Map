@@ -2,7 +2,7 @@ import { createApp } from 'vue';
 import firebase from 'firebase/app';
 import { debounce } from 'throttle-debounce';
 import App from './App.vue';
-import { route } from './router';
+import { router } from './router';
 import 'firebase/analytics';
 import 'reset-css';
 import './assets/styles/main.scss';
@@ -40,11 +40,8 @@ window.addEventListener('load', () => {
 
 const app = createApp(App);
 
-app.use(route);
-app.mount('#app');
-
-route.beforeEach((from, to, next) => {
-  if (from.path === to.path) {
+router.beforeEach((to, from, next) => {
+  if (from.matched.length > 0 && from.path === to.path) {
     return;
   }
 
@@ -56,3 +53,6 @@ route.beforeEach((from, to, next) => {
 
   next();
 });
+
+app.use(router);
+app.mount('#app');
