@@ -1,4 +1,4 @@
-name: ウェブサイトのデプロイ
+name: ウェブサイトのデプロイ（Production）
 on:
   push:
     branches:
