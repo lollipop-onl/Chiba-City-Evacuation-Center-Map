@@ -24,4 +24,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CHIBA_SHELTER_MAP }}'
           expires: 30d
           projectId: chiba-shelter-map
-          channelId: live
+          channelId: staging
