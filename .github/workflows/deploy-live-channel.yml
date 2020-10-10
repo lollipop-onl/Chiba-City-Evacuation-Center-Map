@@ -25,3 +25,4 @@ jobs:
           expires: 30d
           projectId: chiba-shelter-map
           channelId: staging
+
