@@ -1,20 +1,19 @@
 <template>
   <div class="map-menu">
-    <div class="menu">
-      <b>現在地付近の避難所</b>
-      <template v-if="!nearbySheltersFromPresentLocation">現在位置が習得できませんでした</template>
-      <template v-else-if="nearbySheltersFromPresentLocation.length > 0">
-        <div
-          v-for="({ distance, shelter }) in nearbySheltersFromPresentLocation"
-          :key="shelter.id"
+    <ul class="menu map-menu-list">
+      <li class="item">
+        <RouterLink
+          class="link"
+          :to="url('MAP_NEARBY')"
         >
-          <p>{{ shelter.name }}<br />{{ distance }}m</p>
-          <RouterLink :to="url('MAP_SHELTER', { shelterId: shelter.id })">施設を表示</RouterLink>
-          <hr />
-        </div>
-      </template>
-      <template v-else>近くに避難所がありません。</template>
-    </div>
+          <img
+            src="../assets/icons/map-pin-alt.svg"
+            alt=""
+          />
+          <span class="label">現在地周辺の避難所</span>
+        </RouterLink>
+      </li>
+    </ul>
     <button
       class="close"
       @click.stop="closeMenu"
@@ -23,61 +22,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, computed } from 'vue';
-import { PresentLocation, Shelter } from '../types';
-import { checkCoordinateAvailability } from '../utils/checkCoordinateAvailability';
-import { getDistanceFromLatLng } from '../utils/getDistanceFromLatLng';
-import { nonNullable } from '../utils/nonNullable';
+import { defineComponent } from 'vue';
 import { url } from '../utils/url';
-
-type ShelterWithDistance = {
-  distance: number;
-  shelter: Shelter;
-};
 
 export default defineComponent({
   name: 'MapMenu',
-  props: {
-    /** 避難所一覧 */
-    shelters: {
-      type: Array as PropType<Shelter[]>,
-      required: true,
-    },
-    /** ユーザーの現在位置 */
-    presentLocation: {
-      type: Object as PropType<PresentLocation | null>,
-      default: null,
-    },
-  },
   emits: {
     close: null,
   },
   setup(props, { emit }) {
-    const nearbySheltersFromPresentLocation = computed((): ShelterWithDistance[] | null => {
-      if (!props.presentLocation) {
-        return null;
-      }
-
-      if (!checkCoordinateAvailability(props.presentLocation.latitude, props.presentLocation.longitude)) {
-        return [];
-      }
-
-      return props.shelters
-        .map((shelter) => props.presentLocation ? ({
-          distance: getDistanceFromLatLng([shelter.latitude, shelter.longitude], [props.presentLocation.latitude, props.presentLocation.longitude]),
-          shelter,
-        }) : null)
-        .filter(nonNullable)
-        .sort((a, b) => a.distance > b.distance ? 1 : -1)
-        .slice(0, 5);
-    });
-
     const closeMenu = () => {
       emit('close');
     };
 
     return {
-      nearbySheltersFromPresentLocation,
       closeMenu,
       url,
     };
@@ -89,11 +47,13 @@ export default defineComponent({
 @import 'resources';
 
 .map-menu {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   width: 320px;
   max-width: 100%;
   height: calc(var(--vh, 1vh) * 100);
+  padding: 24px 16px;
   color: #fff;
   background: #041122;
 

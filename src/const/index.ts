@@ -3,6 +3,7 @@ export const PAGES = {
   MAP: '/map',
   MAP_MENU: '/map/menu',
   MAP_SHELTER: '/map/shelter/:shelterId',
+  MAP_NEARBY: '/map/nearby',
 };
 
 /**

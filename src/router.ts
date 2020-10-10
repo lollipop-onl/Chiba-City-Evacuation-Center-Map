@@ -22,5 +22,9 @@ export const router = createRouter({
       path: PAGES.MAP_SHELTER,
       component: () => import('./containers/MapPage.vue'),
     },
+    {
+      path: PAGES.MAP_NEARBY,
+      component: () => import('./containers/MapPage.vue'),
+    }
   ],
 });
