@@ -11,9 +11,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: '12'
       - name: yarnのキャッシュディレクトリパスを取得
         id: yarn-cache-dir-path
         run: echo "::set-output name=dir::$(yarn cache dir)"
