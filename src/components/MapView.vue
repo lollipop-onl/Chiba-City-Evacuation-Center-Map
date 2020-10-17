@@ -3,6 +3,7 @@
     <div
       ref="mapView"
       class="map"
+      :data-shelter-id="shelterId"
     />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import { defineComponent, ref, watch, onMounted, PropType, computed } from 'vue';
 import { AVAILABLE_COORDINATE_RANGE } from '../const';
 import { nonNullable } from '../utils/nonNullable';
+import { getShelterMarkerAttributes } from '../utils/getShelterMarkerAttributes';
 import { PresentLocation, Shelter } from '../types';
 
 export default defineComponent({
@@ -62,12 +64,19 @@ export default defineComponent({
             return;
           }
 
-          const { name, latitude, longitude } = shelter;
+          const { id, name, latitude, longitude } = shelter;
+
+          const shelterIcon = window.L.divIcon({
+            iconSize: undefined,
+            html: `<div class="marker" ${getShelterMarkerAttributes(shelter)}></div>`,
+            className: `shelter-marker -shelter-${id}`,
+          });
 
           return window.L
             .marker([latitude, longitude], {
               title: name,
               alt: `${latitude},${longitude}`,
+              icon: shelterIcon,
               riseOnHover: true,
             })
             .addTo(map.value)
@@ -226,55 +235,31 @@ export default defineComponent({
     $marker-size: 40px;
 
     position: absolute;
-    transform: translate(-50%, -50%);
 
     & > .marker {
-      position: relative;
-      width: $marker-size;
-      height: $marker-size;
-      color: #fff;
-      cursor: pointer;
-      background: #ff005b;
-      filter: drop-shadow(0 3px 5px rgba(#000, 0.2));
-      border: 0;
-      border-radius: 50%;
-    }
-
-    & > .marker::before {
       position: absolute;
       top: 50%;
       left: 50%;
-      content: '★';
+      display: block;
+      width: 30px;
+      height: 30px;
+      background-image: url(../assets/images/shelter-marker.png);
+      background-size: contain;
       transform: translate(-50%, -50%);
     }
+  }
 
-    & > .marker::after {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      box-sizing: border-box;
-      width: $marker-size;
-      height: $marker-size;
-      content: '';
-      border: 2px dashed #ff005b;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-    }
+  @for $i from 0 through 500 {
+    & > .map[data-shelter-id="#{$i}"] ::v-deep(.shelter-marker) {
+      &.-shelter-#{$i} {
+        z-index: 791 !important;
+      }
 
-    &.-active > .marker {
-      width: 50px;
-      height: 50px;
-      font-size: 2em;
-      color: #ff005b;
-      background: transparent;
-    }
-
-    &.-active > .marker::before {
-      font-size: 24px;
-    }
-
-    &.-active > .marker::after {
-      animation: spin 10s linear infinite;
+      & > .marker[data-id="#{$i}"] {
+        width: 50px;
+        height: 50px;
+        background-image: url(../assets/images/shelter-marker-active.png);
+      }
     }
   }
   /* stylelint-enable rscss/no-descendant-combinator, rscss/class-format */
